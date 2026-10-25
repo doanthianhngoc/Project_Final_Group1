@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - Áo Dài Việt</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Phần thanh điều hướng -->
+        <div class="thanh_dieu_huong">
+            <div class="anh">
+                <img src="../img/logo_hoa_sen.png" alt="">
+                <div class="text">
+                    <h1><i>Áo Dài Việt</i></h1>
+                    <p><i>Tôn vinh nét đẹp Việt</i></p>
+                </div>
+            </div>
+            <nav class="menu"> 
+                <li><a href="../Trang_chu/index.html">Trang chủ</a></li>
+                <li><a href="../San_pham/index.html">Sản phẩm</a></li>
+                <li><a href="../Gioithieu/index.html">Giới thiệu</a></li>
+                <li><a href="../Lienhe/index.html">Liên hệ</a></li>
+            </nav>
+            <div class="icon">
+                <a href="#" class="icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <a href="../Gio_hang/index.html" class="icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge"></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Phần tiêu đề của trang -->
+        <div class="image">
+            <img src="../img/anh1.png" alt="">
+            <h1>Sản phẩm</h1>
+            <p>Khám phá bộ sưu tập áo dài đa dạng phù hợp với mọi phong cách</p>
+        </div>
+
+        <!-- Danh mục sản phẩm -->
+
+        <div class="container-fluid">
+            <!-- Danh mục và lọc sản phẩm -->
+            <div class="tat_ca_danh_muc">
+                <div class="danh_muc">
+                    <h1>Danh mục</h1>
+                    <ul class="category-menu">
+                        <li><i class="fa-solid fa-shirt"></i> Áo dài truyền thống</li>
+                        <li><i class="fa-solid fa-shirt"></i> Áo dài cách tân</li>
+                        <li><i class="fa-regular fa-gem"></i> Áo dài gấm</li>
+                        <li><i class="fa-solid fa-spa"></i> Áo dài lụa</li>
+                    </ul>
+                </div>
+                <div class="gia">
+                    <h1>Khoảng giá</h1>
+
+
+                        <div class="nut">
+                            <input type="radio" name="price" id="price1" value="300000">
+                            <label for="price1">Dưới 300.000đ</label>
+                        </div>
+                        <div class="nut">
+                            <input type="radio" name="price" id="price2" value="300000-500000">
+                            <label for="price2">300.000đ - 500.000đ</label>
+                        </div>
+                        <div class="nut">
+                            <input type="radio" name="price" id="price3" value="500000-700000">
+                            <label for="price3">500.000đ - 700.000đ</label>
+                        </div>
+                        <div class="nut">
+                            <input type="radio" name="price" id="price4" value="700000">
+                            <label for="price4">Trên 700.000đ</label>
+                        </div>
+                </div>
+                <div class="loc">
+                    <button class="btn-loc">Lọc</button>
+                </div>
+        </div>
+            
+            <!-- Sản phẩm -->
+            <div class="san_pham">
+                <div class="row">
+                    <!-- sp1 -->
+                    <div class="col-md-4">
+                        <div class="aodai">
+                            <img src="../img/aodai1.jpg" alt="">
+                            <p>Áo dài truyền thống</p>
+                            <h1>450.000đ</h1>
+                            <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
+                        </div>
+                    </div>
+
+                    <!-- sp2 -->
+                    <div class="col-md-4">
+                        <div class="aodai">
+                            <img src="../img/aodai2.jpg" alt="">
+                            <p>Áo dài cách tân</p>
+                            <h1>550.000đ</h1>
+                            <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
+                        </div>
+                    </div>
+
+                    <!-- sp3 -->
+                    <div class="col-md-4">
+                        <div class="aodai">
+                            <img src="../img/aodai3.jpg" alt="">
+                            <p>Áo dài lụa</p>
+                            <h1>1.550.000đ</h1>
+                            <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
+                        </div>
+                    </div>
+
+                    <!-- sp4 -->
+                    <div class="col-md-4">
+                        <div class="aodai">
+                            <img src="../img/aodai4.jpg" alt="">
+                            <p>Áo dài Gấm</p>
+                            <h1>2.550.000đ</h1>
+                            <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
+                        </div>
+                    </div>
+
+                    <!-- sp5 -->
+                    <div class="col-md-4">
+                        <div class="aodai">
+                            <img src="../img/aodai5.jpg" alt="">
+                            <p>Áo dài cách tân</p>
+                            <h1>750.000đ</h1>
+                            <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
+                        </div>
+                    </div>
+
+                    <!-- sp6 -->
+                    <div class="col-md-4">
+                        <div class="aodai">
+                            <img src="../img/aodai6.jpg" alt="">
+                            <p>Áo dài cách tân</p>
+                            <h1>950.000đ</h1>
+                            <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nút chuyển trang  -->
+        <div class="button">
+            <button onclick="" id="sangtrai"><i class="fa-solid fa-chevron-left"></i></button>
+            <button onclick="" id="trang1">1</button>
+            <button onclick="" id="trang2">2</button>
+            <button onclick="" id="trang3">3</button>
+            <button onclick="" id="sangtrai"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+</body>
+</html>

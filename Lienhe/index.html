@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Áo Dài Việt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+</head>
+
+<body>
+
+    <!-- Phần thanh điều hướng -->
+        <div class="thanh_dieu_huong">
+            <div class="anh">
+                <img src="../img/logo_hoa_sen.png" alt="">
+                <div class="text">
+                    <h1><i>Áo Dài Việt</i></h1>
+                    <p><i>Tôn vinh nét đẹp Việt</i></p>
+                </div>
+            </div>
+            <nav class="menu"> 
+                <li><a href="../Trang_chu/index.html">Trang chủ</a></li>
+                <li><a href="../San_pham/index.html">Sản phẩm</a></li>
+                <li><a href="../Gioithieu/index.html">Giới thiệu</a></li>
+                <li><a href="../Lienhe/index.html">Liên hệ</a></li>
+            </nav>
+            <div class="icon">
+                <a href="#" class="icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <a href="../Gio_hang/index.html" class="icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge"></span>
+                </a>
+            </div>
+        </div>
+
+    <main class="contact-page">
+
+        <section class="contact-banner">
+            <h1>Liên hệ với chúng tôi</h1>
+            <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn!</p>
+        </section>
+
+    
+        <section class="contact-container">
+
+            <div class="contact-info">
+
+                <h2>Thông tin liên hệ</h2>
+
+                <div class="info-item">
+                    <div class="info-icon">⌖</div>
+                    <div>
+                        <h3>Địa chỉ</h3>
+                        <p>123 Nguyễn Văn Cừ, Quận 1, TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">☎</div>
+                    <div>
+                        <h3>Điện thoại</h3>
+                        <p>
+                            <a href="tel:0123456789">0123 456 789</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">✉</div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>
+                            <a href="mailto:support@aodaiviet.vn">
+                                support@aodaiviet.vn
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">◷</div>
+                    <div>
+                        <h3>Giờ làm việc</h3>
+                        <p>8:00 - 22:00 (Thứ 2 - Chủ nhật)</p>
+                    </div>
+                </div>
+
+                <iframe
+                    src="https://maps.google.com/maps?q=Da%20Nang%2C%20Vietnam&z=13&output=embed"
+                    title="Bản đồ Đà Nẵng"
+                    width="100%"
+                    height="230"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        
+            <div class="contact-form-box">
+
+                <h2>Gửi tin nhắn cho chúng tôi</h2>
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+                        <label for="fullName">Họ và tên <span>*</span></label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Nhập họ và tên"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span>*</span></label>
+                        <input
+                            type="text"
+                            id="email"
+                            name="email"
+                            placeholder="Nhập email"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Nội dung <span>*</span></label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Nhập nội dung..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <span>➤</span> Gửi liên hệ
+                    </button>
+
+                    <p id="formNotice" role="status" aria-live="polite"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

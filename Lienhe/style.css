@@ -1,0 +1,318 @@
+
+/* CSS Thanh điều hướng */
+.thanh_dieu_huong{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px; 
+    line-height: normal;
+
+}
+.anh{
+    display: flex;
+    flex-direction: row;  
+    align-items: center;  
+    
+}
+.about-button:hover {
+    background-color: #a72e5b;
+}
+.anh .text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.text h1{
+    font-size: 40px;
+    color: hsl(334, 47%, 63%);
+    font-weight: bold;
+    line-height: normal;
+    margin: 0;
+}
+.text p{
+    font-size: 20px;
+    color: hsl(334, 47%, 63%);
+    line-height: normal;
+    margin: 0;
+}
+
+.anh img{
+    height: 150px;
+
+    
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: #51464a;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #c83e70;
+}
+.icon{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    color: black;
+    gap: 20px;
+}
+/* Cài đặt chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #51464a;
+    background-color: #ffffff;
+}
+
+.contact-page {
+    width: 100%;
+}
+
+/* Banner liên hệ */
+.contact-banner {
+    min-height: 170px;
+    padding: 35px 20px;
+    background: linear-gradient(135deg, #fbe5e5, #fff0f0);
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-banner h1 {
+    color: #9e3d61;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.contact-banner p {
+    color: #70535d;
+    font-size: 18px;
+}
+
+/* Khu vực hai cột */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 25px 40px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+/* Tiêu đề hai cột */
+.contact-info h2,
+.contact-form-box h2 {
+    font-size: 25px;
+    color: #303747;
+    margin-bottom: 25px;
+}
+
+/* Thông tin liên hệ */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.info-icon {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #fbe7ef;
+    color: #b33e69;
+    font-size: 29px;
+}
+
+.info-item h3 {
+    color: #51404a;
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.info-item p {
+    color: #777078;
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.info-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    color: #c83e70;
+}
+
+/* Bản đồ */
+.contact-map {
+    width: 100%;
+    height: 230px;
+    margin-top: 28px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Khung form */
+.contact-form-box {
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #f2e7eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(130, 65, 90, 0.07);
+}
+
+.contact-form-box h2 {
+    margin-bottom: 25px;
+}
+
+/* Các trường nhập */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #51464a;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.form-group label span {
+    color: #c83e70;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #e4dfe2;
+    border-radius: 7px;
+    outline: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #51464a;
+    background-color: #ffffff;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #c83e70;
+    box-shadow: 0 0 0 3px rgba(200, 62, 112, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa1a6;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 125px;
+}
+
+/* Báo lỗi */
+.error-message {
+    display: block;
+    min-height: 0;
+    margin-top: 5px;
+    color: #d12f48;
+    font-size: 13px;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: #d12f48;
+}
+
+/* Nút gửi */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+
+    background-color: #c83e70;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button span {
+    margin-right: 8px;
+}
+
+.submit-button:hover {
+    background-color: #a72e5b;
+}
+
+.submit-button:active {
+    transform: scale(0.99);
+}
+
+/* Thông báo gửi */
+#formNotice {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#formNotice.success {
+    color: #218653;
+}
+
+#formNotice.error {
+    color: #d12f48;
+}
