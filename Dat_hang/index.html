@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt hàng - Áo Dài Việt</title>
+
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Thanh điều hướng -->
+    <div class="thanh_dieu_huong">
+        <div class="anh">
+            <img src="../img/logo_hoa_sen.png" alt="Logo Áo Dài Việt">
+
+            <div class="text">
+                <h1><i>Áo Dài Việt</i></h1>
+                <p><i>Tôn vinh nét đẹp Việt</i></p>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <li><a href="../Trang_chu/index.html">Trang chủ</a></li>
+            <li><a href="../San_pham/index.html">Sản phẩm</a></li>
+            <li><a href="../Gioithieu/index.html">Giới thiệu</a></li>
+            <li><a href="../Lienhe/index.html">Liên hệ</a></li>
+        </nav>
+
+        <div class="icon">
+            <a href="#" class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+
+            <a href="#" class="icon">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <a href="../Gio_hang/index.html" class="icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Banner đặt hàng -->
+    <div class="image">
+        <img src="../img/anh1.png" alt="Banner Áo Dài Việt">
+        <h1>Đặt hàng</h1>
+        <p>Hoàn tất thông tin để đặt hàng</p>
+    </div>
+
+    <!-- Form đặt hàng -->
+    <main>
+        <h2>THÔNG TIN NHẬN HÀNG</h2>
+        <p class="intro">Vui lòng điền đầy đủ thông tin của bạn.</p>
+
+        <form id="orderForm">
+
+            <label for="name">Họ và tên</label>
+            <input type="text" id="name"
+                   placeholder="Nhập họ và tên" required>
+
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone"
+                   placeholder="Nhập số điện thoại" required>
+
+            <label for="address">Địa chỉ nhận hàng</label>
+            <textarea id="address"
+                      placeholder="Nhập địa chỉ cụ thể"
+                      required></textarea>
+
+            <label for="note">Ghi chú</label>
+            <textarea id="note"
+                      placeholder="Ghi chú thêm (nếu có)"></textarea>
+
+            <label for="payment">Phương thức thanh toán</label>
+            <select id="payment">
+                <option value="Thanh toán khi nhận hàng (COD)">
+                    Thanh toán khi nhận hàng (COD)
+                </option>
+                <option value="Chuyển khoản ngân hàng">
+                    Chuyển khoản ngân hàng
+                </option>
+            </select>
+
+            <!-- Tổng tiền -->
+            <div class="total">
+                <span>Tổng thanh toán</span>
+                <strong id="totalPrice">450.000đ</strong>
+            </div>
+
+            <button type="submit" class="order-button">
+                ĐẶT HÀNG NGAY
+            </button>
+
+            <a class="back" href="../Gio_hang/index.html">
+                Quay lại giỏ hàng
+            </a>
+
+        </form>
+    </main>
+
+    <!-- Chân trang -->
+    <footer>
+        © 2026 Áo Dài Việt
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
