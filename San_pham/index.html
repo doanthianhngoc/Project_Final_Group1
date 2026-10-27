@@ -20,7 +20,7 @@
     <!-- Bootstrap JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body onload="san_pham()">
     <!-- Phần thanh điều hướng -->
         <div class="thanh_dieu_huong">
             <div class="anh">
@@ -31,16 +31,17 @@
                 </div>
             </div>
             <nav class="menu"> 
+                
                 <li><a href="../Trang_chu/index.html">Trang chủ</a></li>
                 <li><a href="../San_pham/index.html">Sản phẩm</a></li>
                 <li><a href="../Gioithieu/index.html">Giới thiệu</a></li>
                 <li><a href="../Lienhe/index.html">Liên hệ</a></li>
             </nav>
             <div class="icon">
-                <a href="#" class="icon">
+                <a href="../Tim_kiem_san_pham/index.html" class="icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
-                <a href="#" class="icon">
+                <a href="../Dang_Nhap_Ky/index.html" class="icon">
                     <i class="fa-regular fa-user"></i>
                 </a>
                 <a href="../Gio_hang/index.html" class="icon">
@@ -99,66 +100,8 @@
             
             <!-- Sản phẩm -->
             <div class="san_pham">
-                <div class="row">
-                    <!-- sp1 -->
-                    <div class="col-md-4">
-                        <div class="aodai">
-                            <img src="../img/aodai1.jpg" alt="">
-                            <p>Áo dài truyền thống</p>
-                            <h1>450.000đ</h1>
-                            <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
-                        </div>
-                    </div>
+                <div class="row" id="aodai">
 
-                    <!-- sp2 -->
-                    <div class="col-md-4">
-                        <div class="aodai">
-                            <img src="../img/aodai2.jpg" alt="">
-                            <p>Áo dài cách tân</p>
-                            <h1>550.000đ</h1>
-                            <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
-                        </div>
-                    </div>
-
-                    <!-- sp3 -->
-                    <div class="col-md-4">
-                        <div class="aodai">
-                            <img src="../img/aodai3.jpg" alt="">
-                            <p>Áo dài lụa</p>
-                            <h1>1.550.000đ</h1>
-                            <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
-                        </div>
-                    </div>
-
-                    <!-- sp4 -->
-                    <div class="col-md-4">
-                        <div class="aodai">
-                            <img src="../img/aodai4.jpg" alt="">
-                            <p>Áo dài Gấm</p>
-                            <h1>2.550.000đ</h1>
-                            <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
-                        </div>
-                    </div>
-
-                    <!-- sp5 -->
-                    <div class="col-md-4">
-                        <div class="aodai">
-                            <img src="../img/aodai5.jpg" alt="">
-                            <p>Áo dài cách tân</p>
-                            <h1>750.000đ</h1>
-                            <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
-                        </div>
-                    </div>
-
-                    <!-- sp6 -->
-                    <div class="col-md-4">
-                        <div class="aodai">
-                            <img src="../img/aodai6.jpg" alt="">
-                            <p>Áo dài cách tân</p>
-                            <h1>950.000đ</h1>
-                            <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -170,5 +113,6 @@
             <button onclick="" id="trang3">3</button>
             <button onclick="" id="sangtrai"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
+    <script src="script.js"></script>
 </body>
 </html>

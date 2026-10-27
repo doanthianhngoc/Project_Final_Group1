@@ -1,0 +1,322 @@
+
+/* Cài đặt chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #51464a;
+    background-color: #fffafa;
+    margin: 20px;
+}
+
+/* CSS Thanh điều hướng */
+.thanh_dieu_huong{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; 
+    line-height: normal;
+
+}
+.anh{
+    display: flex;
+    flex-direction: row;  
+    align-items: center;  
+    
+}
+.about-button:hover {
+    background-color: #a72e5b;
+}
+.anh .text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.text h1{
+    font-size: 40px;
+    color: hsl(334, 47%, 63%);
+    font-weight: bold;
+    line-height: normal;
+    margin: 0;
+}
+.text p{
+    font-size: 20px;
+    color: hsl(334, 47%, 63%);
+    line-height: normal;
+    margin: 0;
+}
+
+.anh img{
+    height: 150px;
+
+    
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: #51464a;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #c83e70;
+}
+.icon{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    color: black;
+    gap: 20px;
+}
+
+
+
+/* Khung đăng nhập */
+.khung_dang_nhap {
+    display: flex;
+    max-width: 80%;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(150, 70, 100, 0.12);
+    border: 1px solid #f2dce4;
+}
+
+/* Phần giới thiệu bên trái */
+.hinh_anh {
+    width: 40%;
+    background-color: #fbe9e3;
+    color: #a52a45;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.hinh_anh i {
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.hinh_anh h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.hinh_anh p {
+    
+    font-size: 25px;
+}
+
+/* Form đăng nhập bên phải */
+.form_dang_nhap {
+    width: 60%;
+    padding: 40px;
+}
+
+.form_dang_nhap h2 {
+    color: #a52a45;
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.mo_ta {
+    font-size: 20px;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+/* Ô nhập thông tin */
+.nhap_lieu {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.nhap_lieu label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.o_nhap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.o_nhap:focus-within {
+    border-color: #bd405c;
+}
+
+.o_nhap > i:first-child {
+    color: #bd405c;
+}
+
+.o_nhap input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: transparent;
+}
+
+.nut_hien {
+    cursor: pointer;
+    color: #777;
+}
+
+/* Thông báo lỗi */
+.loi {
+    color: #d62839;
+    font-size: 13px;
+    margin-top: 5px;
+    min-height: 15px;
+}
+
+/* Ghi nhớ và quên mật khẩu */
+.tuy_chon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    margin: 15px 0 20px;
+}
+
+.tuy_chon label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tuy_chon a,
+.dang_ky a {
+    color: #b52f67;
+    text-decoration: none;
+}
+
+.tuy_chon a:hover,
+.dang_ky a:hover {
+    text-decoration: underline;
+}
+
+/* Nút đăng nhập */
+.btn_dang_nhap {
+    width: 100%;
+    padding: 13px;
+    background-color: #bd405c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn_dang_nhap:hover {
+    background-color: #a52a45;
+}
+
+/* Thông báo kết quả */
+#thongBao {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Đăng ký và quay lại */
+.dang_ky {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.quay_lai {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #777;
+    text-decoration: none;
+}
+
+.quay_lai:hover {
+    color: #bd405c;
+}
+
+/* Chân trang */
+footer {
+    background-color: #fbe9e3;
+    text-align: center;
+    padding: 15px;
+    color: #a52a45;
+    margin-top: 30px;
+}
+
+/* Giao diện điện thoại */
+@media (max-width: 768px) {
+    .thanh_dieu_huong {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .khung_dang_nhap {
+        flex-direction: column;
+    }
+
+    .hinh_anh,
+    .form_dang_nhap {
+        width: 100%;
+    }
+
+    .hinh_anh {
+        padding: 25px;
+    }
+
+    .form_dang_nhap {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .tuy_chon {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

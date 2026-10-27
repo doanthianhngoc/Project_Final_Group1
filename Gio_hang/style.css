@@ -234,3 +234,83 @@ table td {
     background-color: #a72e5b;
 }
 
+
+/* Giao diện điện thoại */
+@media (max-width: 768px) {
+    .thanh_dieu_huong {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .khung_dang_nhap {
+        flex-direction: column;
+    }
+
+    .hinh_anh,
+    .form_dang_nhap {
+        width: 100%;
+    }
+
+    .hinh_anh {
+        padding: 25px;
+    }
+
+    .form_dang_nhap {
+        padding: 25px;
+    }
+
+    /* Banner */
+    .image h1{
+        font-size: 40px;
+        left: 30px;
+    }
+    .image p{
+        font-size: 18px;
+        left: 30px;
+    }
+
+    /* Bảng */
+    table {
+    width: 100px;
+    height: 50px;
+    }
+    table th,
+    table td {
+    font-size: 10px;
+    }
+
+
+.sanpham{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.sanpham img{
+    width: 50px;
+    height: 60px;
+    object-fit: cover;
+    
+    
+}
+
+.sanpham p{
+    text-align: center;
+    font-size:10px ;
+}
+    
+}
+
+@media (max-width: 400px) {
+    .tuy_chon {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

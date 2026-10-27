@@ -1,0 +1,163 @@
+
+/* Thiết lập kích thước cho mọi phần tử */
+* {
+    box-sizing: border-box;
+}
+
+/* Giao diện tổng thể */
+body {
+    margin: 0;
+    background: #fff8f6;
+    color: #51464a;
+    font-family: Arial, sans-serif;
+}
+
+/* Thanh đầu trang */
+header {
+    padding: 20px 5%;
+    background: #fbe9e3;
+
+    /* Đặt tên cửa hàng và liên kết trên cùng một hàng */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Màu tiêu đề */
+header h1 {
+    color: #bd405c;
+}
+
+/* Kiểu hiển thị liên kết */
+a {
+    color: #a52a45;
+    text-decoration: none; /* Bỏ gạch chân */
+    font-weight: bold;
+}
+
+/* Giới hạn chiều rộng nội dung và căn giữa */
+main {
+    width: 92%;
+    max-width: 1180px;
+    margin: 30px auto;
+}
+
+/* Màu tiêu đề */
+h2,
+h3 {
+    color: #a52a45;
+}
+
+/* Khung chứa biểu mẫu và bảng */
+.panel {
+    background: white;
+    border: 1px solid #f0dfe3;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 20px 0;
+}
+
+/* Sắp xếp các ô nhập thành hai cột */
+form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+/* Nhãn nằm phía trên ô nhập */
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-weight: bold;
+}
+
+/* Định dạng ô nhập và danh sách chọn */
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #dfc9ce;
+    border-radius: 7px;
+    font: inherit;
+}
+
+/* Kiểu chung cho nút */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #bd405c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Đặt các nút cạnh nhau */
+.buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Khung bảng cho phép cuộn ngang khi màn hình nhỏ */
+.table-wrap {
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
+/* Bảng chiếm toàn bộ chiều rộng */
+table {
+    width: 100%;
+    min-width: 750px;
+    border-collapse: collapse; /* Gộp đường viền */
+}
+
+/* Khoảng cách và đường kẻ của từng ô */
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eadadd;
+    text-align: left;
+}
+
+/* Phần tiêu đề bảng */
+th {
+    background: #fbe9e3;
+    color: #a52a45;
+}
+
+/* Nút sửa */
+.edit {
+    background: #3478bd;
+}
+
+/* Nút xóa */
+.delete {
+    background: #c0392b;
+}
+
+/* Xếp nút sửa và xóa cạnh nhau */
+.row-actions {
+    display: flex;
+    gap: 7px;
+}
+
+/* Màu thông báo */
+#message {
+    color: #18794e;
+}
+
+/* Responsive cho màn hình điện thoại */
+@media (max-width: 650px) {
+    form {
+        grid-template-columns: 1fr; /* Chuyển thành một cột */
+    }
+
+    header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+

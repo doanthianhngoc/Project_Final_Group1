@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Áo Dài Việt</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Phần thanh điều hướng -->
+        <div class="thanh_dieu_huong">
+            <div class="anh">
+                <img src="../img/logo_hoa_sen.png" alt="">
+                <div class="text">
+                    <h1><i>Áo Dài Việt</i></h1>
+                    <p><i>Tôn vinh nét đẹp Việt</i></p>
+                </div>
+            </div>
+            <nav class="menu"> 
+                
+                <li><a href="../Trang_chu/index.html">Trang chủ</a></li>
+                <li><a href="../San_pham/index.html">Sản phẩm</a></li>
+                <li><a href="../Gioithieu/index.html">Giới thiệu</a></li>
+                <li><a href="../Lienhe/index.html">Liên hệ</a></li>
+            </nav>
+            <div class="icon">
+                <a href="../Tim_kiem_san_pham/index.html" class="icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="../Dang_Nhap_Ky/index.html" class="icon">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <a href="../Gio_hang/index.html" class="icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge"></span>
+                </a>
+            </div>
+        </div>
+
+
+    <!-- Phần đăng nhập -->
+    <div class="khung_dang_nhap">
+
+        <div class="hinh_anh">
+            <i class="fa-solid fa-spa"></i>
+            <h2>Áo Dài Việt</h2>
+            <p>
+                Gìn giữ nét đẹp truyền thống,
+                tôn vinh vẻ đẹp người phụ nữ Việt Nam.
+            </p>
+        </div>
+
+        <div class="form_dang_nhap">
+
+            <h2>Đăng nhập</h2>
+            <p class="mo_ta">Chào mừng bạn quay trở lại!</p>
+
+            <form id="formDangNhap">
+
+                <div class="nhap_lieu">
+                    <label for="taiKhoan">Tên đăng nhập hoặc email</label>
+
+                    <div class="o_nhap">
+                        <i class="fa-regular fa-user"></i>
+
+                        <input type="text" id="taiKhoan"
+                        placeholder="Nhập tài khoản hoặc email">
+                    </div>
+
+                    <p class="loi" id="loiTaiKhoan"></p>
+                </div>
+
+                <div class="nhap_lieu">
+                    <label for="matKhau">Mật khẩu</label>
+
+                    <div class="o_nhap">
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password" id="matKhau"
+                        placeholder="Nhập mật khẩu">
+
+    
+                    </div>
+
+                    <p class="loi" id="loiMatKhau"></p>
+                </div>
+
+
+                <button type="submit" class="btn_dang_nhap">
+                    Đăng nhập
+                </button>
+
+                <p id="thongBao"></p>
+
+
+                <a href="../Trang_chu/index.html" class="quay_lai">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Quay về trang chủ
+                </a>
+
+                <a href="../Quan_ly_nguoi_dung/index.html" class="quay_lai">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Danh sách người dùng
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Áo Dài Việt - Gìn giữ nét đẹp truyền thống Việt Nam</p>
+    </footer>
+
+    <!-- Kết nối JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

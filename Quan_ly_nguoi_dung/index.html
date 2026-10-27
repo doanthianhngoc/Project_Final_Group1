@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tiêu đề của trang quản lý -->
+    <title>Quản lý người dùng</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Kết nối CSS của trang quản lý -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main>
+        <h2>Quản lý người dùng</h2>
+
+        <!-- Khu vực nhập thông tin để thêm hoặc sửa người dùng -->
+        <section class="panel">
+            <h3 id="formTitle">Thêm người dùng</h3>
+
+            <form id="userForm">
+                <!-- Lưu ID của người dùng đang sửa.
+                     Để trống nghĩa là đang thêm người dùng mới. -->
+                <input type="hidden" id="userId">
+
+                <!-- Các ô nhập thông tin tài khoản -->
+
+                <label>Tên đăng nhập hoặc Email
+                    <input id="email" type="email" required>
+                </label>
+
+                <label>Mật khẩu
+                    <input id="password" type="password">
+                </label>
+
+                <!-- Chọn quyền của tài khoản -->
+                <label>Vai trò
+                    <select id="role">
+                        <option value="Khách hàng">Khách hàng</option>
+                        <option value="Quản trị viên">Quản trị viên</option>
+                    </select>
+                </label>
+
+                <!-- Nút gửi form và nút làm mới -->
+                <div class="buttons">
+                    <button type="submit" id="saveButton">
+                        Thêm tài khoản
+                    </button>
+
+                    <button type="button" id="resetButton">
+                        Làm mới
+                    </button>
+                </div>
+
+                <!-- Hiển thị kết quả thêm, sửa hoặc lỗi -->
+                <p id="message"></p>
+            </form>
+        </section>
+
+        <a href="../Trang_chu/index.html" class="quay_lai">
+                    <-- Quay về trang chủ
+        </a>
+
+        <!-- Khu vực hiển thị danh sách người dùng -->
+        <section class="panel">
+            <h3>Danh sách người dùng</h3>
+
+            <!-- Ô tìm kiếm theo tên, tài khoản hoặc email -->
+            <input id="search" placeholder="Tìm kiếm người dùng...">
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên đăng nhập hoặc Email</th>
+                            <th>Vai trò</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+
+                    <!-- JavaScript sẽ tự thêm các dòng vào đây -->
+                    <tbody id="rows"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Kết nối JavaScript xử lý quản lý người dùng -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -101,7 +101,8 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #bf7781;
+    color: #9e3d61;
+    font-family: Georgia, serif;
     text-align: center;
     font-weight: bold;
     font-size: 60px;
@@ -111,7 +112,8 @@ body {
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #a65873;
+    color: #9e3d61;
+    font-family: Georgia, serif;
     text-align: center;
     font-size: 30px;
 }
@@ -133,7 +135,7 @@ body {
     gap: 50px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
     
 
 }
@@ -189,9 +191,10 @@ body {
     flex-direction: row;
     
     
+    
 }
 
-.aodai {
+.row {
     text-align: center;
     padding: 15px;
     margin-bottom: 20px;
@@ -200,33 +203,37 @@ body {
     overflow: hidden;
 }
 
-.aodai img {
+.row img {
     width: 100%;
     height: 300px;
     object-fit: cover;
     object-position: center;
     display: block;
-    border-radius: 8px;
+    
 }
 
-.aodai p {
-    font-size: 18px;
+.row p {
+    font-size: 25px;
     margin-top: 15px;
 }
 
-.aodai h1 {
-    font-size: 22px;
-    color: #c0392b;
+.row h5 {
+    font-size: 25px;
+    color: black;
 }
 
-.aodai i {
-    font-size: 22px;
-    cursor: pointer;
-    color: #333;
+#aodai .card:hover {
+    transform: translateY(-10px);      /* Đẩy sản phẩm trồi lên 10px */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18); /* Tăng độ đậm bóng đổ để tạo cảm giác nổi lên */
 }
-.aodai:hover{
-   padding: 0px;
+
+#aodai .card-img-top {
+    height: 300px;
+    object-fit: cover;                 /* Giữ ảnh vừa vặn khung mà không bị méo */
+    transition: transform 0.3s ease;
 }
+
+
 
 .loc{
     display: flex;
@@ -255,4 +262,76 @@ body {
 .button button{
     font-size: 25px;
     padding: 5px 10px;
+}
+
+
+/* Giao diện điện thoại */
+@media (max-width: 768px) {
+    .thanh_dieu_huong {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .khung_dang_nhap {
+        flex-direction: column;
+    }
+
+    .hinh_anh,
+    .form_dang_nhap {
+        width: 100%;
+    }
+
+    .hinh_anh {
+        padding: 25px;
+    }
+
+    .form_dang_nhap {
+        padding: 25px;
+    }
+
+    .image h1{
+        font-size: 40px;
+    }
+    .image p{
+        font-size: 18px;
+    }
+
+    .tat_ca_danh_muc h1{
+        
+         font-size: 27px;
+    }
+
+    .nut{
+    font-size: 20px;
+    }
+
+    .category-menu li{
+    font-size: 20px;
+    }
+
+    .row p {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.row h5 {
+    font-size: 20px;
+    color: black;
+}
+
+    
+}
+
+@media (max-width: 400px) {
+    .tuy_chon {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
