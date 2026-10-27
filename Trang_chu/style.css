@@ -120,7 +120,7 @@ body {
 }
 
 .banner-image {
-    width: 100%;
+    width: 50%;
     height: 320px;
 }
 
@@ -386,7 +386,7 @@ footer {
 }
 
 /* Dien thoai */
-@media (max-width: 550px) {
+@media (max-width: 768px) {
     #lien-he {
         padding: 35px 7% 0;
     }
@@ -398,5 +398,17 @@ footer {
 
     #lien-he .footer-logo {
         font-size: 30px;
+    }
+    /* Thanh điều hướng */
+    .thanh_dieu_huong {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
     }
 }

@@ -255,68 +255,53 @@ body {
     color: #D66A91;
 }
 
-/* Dien thoai */
-@media (max-width: 900px) {
+
+
+/* Giao diện điện thoại */
+@media (max-width: 768px) {
     .thanh_dieu_huong {
         flex-wrap: wrap;
-        justify-content: center;
     }
 
     .menu {
+        width: 100%;
+        justify-content: center;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        gap: 15px;
+        margin-top: 20px;
     }
 
-    .banner-text h2 {
-        font-size: 28px;
+    .image h1{
+        font-size: 40px;
+    }
+    .image p{
+        font-size: 18px;
+        margin-top: 20px;
     }
 
-    .banner-text p {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 550px) {
-    .anh img {
-        width: 80px;
-        height: 80px;
+    .khung_dang_nhap {
+        flex-direction: column;
     }
 
-    .text h1 {
-        font-size: 23px;
-    }
-
-    .menu {
-        gap: 12px;
-    }
-
-    .menu a {
-        font-size: 14px;
-    }
-
-    .banner {
-        height: 160px;
-        margin: 8px;
-    }
-
-    .banner-text h2 {
-        font-size: 23px;
-    }
-
-    .banner-text p {
-        font-size: px;
-    }
-
-    .thanh-tim-kiem {
-        gap: 5px;
-    }
-
-    .thanh-tim-kiem button {
-        padding: 10px;
-    }
-
-    .san-pham {
+    .hinh_anh,
+    .form_dang_nhap {
         width: 100%;
     }
+
+    .hinh_anh {
+        padding: 25px;
+    }
+
+    .form_dang_nhap {
+        padding: 25px;
+    }
 }
+
+@media (max-width: 400px) {
+    .tuy_chon {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
