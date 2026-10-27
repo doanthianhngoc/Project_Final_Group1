@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #51464a;
+    background-color: #ffffff;
+    margin: 20px;
+}
+/* CSS Thanh điều hướng */
+.thanh_dieu_huong{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; 
+    line-height: normal;
+
+}
+.anh{
+    display: flex;
+    flex-direction: row;  
+    align-items: center;  
+    
+}
+.about-button:hover {
+    background-color: #a72e5b;
+}
+.anh .text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.text h1{
+    font-size: 40px;
+    color: hsl(334, 47%, 63%);
+    font-weight: bold;
+    line-height: normal;
+    margin: 0;
+}
+.text p{
+    font-size: 20px;
+    color: hsl(334, 47%, 63%);
+    line-height: normal;
+    margin: 0;
+}
+
+.anh img{
+    height: 150px;
+
+    
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: #51464a;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #c83e70;
+}
+.icon{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    color: black;
+    gap: 20px;
+}
+
+/* Banner */
+
+.image{
+    position: relative;
+    margin-top: 20px;
+}
+.image img{
+    display: block;
+    width: 100%;
+    height: 250px;
+}
+.image h1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #bf7781;
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+}
+.image p{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #a65873;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Thanh tim kiem */
+.thanh-tim-kiem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 700px;
+    margin: 25px auto 15px;
+    padding: 8px 12px;
+    border: 1px solid #D9B9A9;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px #f3e4df;
+}
+
+.thanh-tim-kiem i {
+    color: #8B2635;
+    padding-left: 8px;
+}
+
+.thanh-tim-kiem input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 12px 5px;
+    font-size: 15px;
+}
+
+.thanh-tim-kiem button {
+    background-color: #8B2635;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.thanh-tim-kiem button:hover {
+    background-color: #D66A91;
+}
+
+/* Tu khoa goi y */
+.goi-y {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.goi-y span {
+    font-size: 14px;
+}
+
+.goi-y button {
+    padding: 8px 14px;
+    border: 1px solid #E8C7CD;
+    border-radius: 20px;
+    background-color: #FFF4F3;
+    color: #8B2635;
+    cursor: pointer;
+}
+
+.goi-y button:hover {
+    background-color: #8B2635;
+    color: white;
+}
+
+/* Thong bao tim kiem */
+#thongBao {
+    text-align: center;
+    color: #8B2635;
+    margin: 20px 0;
+}
+
+/* Danh sach san pham */
+.danh-sach-san-pham {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.san-pham {
+    width: 280px;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    text-align: center;
+    background-color: white;
+}
+
+.san-pham img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.san-pham h3 {
+    color: #5C3535;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.gia {
+    color: #e53935;
+    font-size: 17px;
+}
+
+.nut-xem {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #8B2635;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.nut-xem:hover {
+    background-color: #D66A91;
+    color: white;
+}
+
+/* Nut quay lai */
+.nut-quay-lai {
+    margin: 35px 0;
+}
+
+.nut-quay-lai a {
+    color: #8B2635;
+    text-decoration: none;
+}
+
+.nut-quay-lai a:hover {
+    color: #D66A91;
+}
+
+/* Dien thoai */
+@media (max-width: 900px) {
+    .thanh_dieu_huong {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .banner-text h2 {
+        font-size: 28px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 550px) {
+    .anh img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .text h1 {
+        font-size: 23px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .banner {
+        height: 160px;
+        margin: 8px;
+    }
+
+    .banner-text h2 {
+        font-size: 23px;
+    }
+
+    .banner-text p {
+        font-size: px;
+    }
+
+    .thanh-tim-kiem {
+        gap: 5px;
+    }
+
+    .thanh-tim-kiem button {
+        padding: 10px;
+    }
+
+    .san-pham {
+        width: 100%;
+    }
+}

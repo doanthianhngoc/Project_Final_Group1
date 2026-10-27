@@ -120,7 +120,7 @@ body {
 }
 
 .banner-image {
-    width: 50%;
+    width: 100%;
     height: 320px;
 }
 
@@ -239,3 +239,164 @@ footer {
     font-size: 17px;
 }
 
+/* ===== FOOTER AO DAI VIET ===== */
+#lien-he {
+    background-color: #FAE9E3;
+    color: #5C3535;
+    padding: 45px 6% 0;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+/* Chia thanh 4 cot */
+#lien-he .footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.3fr 1.3fr;
+    gap: 40px;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding-bottom: 35px;
+    align-items: start;
+    text-align: left;
+}
+
+/* Ten thuong hieu */
+#lien-he .footer-logo {
+    color: #8B2635;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin: 0 0 8px;
+}
+
+#lien-he .footer-slogan {
+    color: #A87935;
+    font-size: 14px;
+    
+}
+
+/* Tieu de cac cot */
+#lien-he .footer-column h3 {
+    color: #A87935;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin: 5px 0 22px;
+}
+
+
+/* Noi dung gioi thieu ben trai */
+#lien-he .footer-description {
+    color: #5C3535;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left;
+    margin: 0;
+}
+
+/* Xoa dau cham va can le danh sach */
+#lien-he .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lien-he .footer-links li {
+    margin-bottom: 12px;
+}
+
+#lien-he .footer-links a {
+    color: #5C3535;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#lien-he .footer-links a:hover {
+    color: #8B2635;
+    padding-left: 6px;
+}
+
+/* Thong tin lien he */
+#lien-he .footer-contact p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #5C3535;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 15px;
+}
+
+#lien-he .footer-contact p i {
+    color: #8B2635;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+/* Mang xa hoi */
+#lien-he .footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#lien-he .footer-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #C49A78;
+    border-radius: 50%;
+    color: #8B2635;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#lien-he .footer-social a:hover {
+    background-color: #8B2635;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Duong ke va ban quyen */
+#lien-he .footer-bottom {
+    border-top: 1px solid #D9B9A9;
+    text-align: center;
+    padding: 15px 0;
+    color: #5C3535;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+#lien-he .footer-bottom p {
+    margin: 4px 0;
+}
+
+#lien-he .footer-thank {
+    color: #8B2635;
+    font-style: italic;
+}
+
+/* May tinh bang */
+@media (max-width: 900px) {
+    #lien-he .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+/* Dien thoai */
+@media (max-width: 550px) {
+    #lien-he {
+        padding: 35px 7% 0;
+    }
+
+    #lien-he .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    #lien-he .footer-logo {
+        font-size: 30px;
+    }
+}

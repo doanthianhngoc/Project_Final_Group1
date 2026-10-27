@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm sản phẩm - Áo Dài Việt</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!-- Phần thanh điều hướng -->
+        <div class="thanh_dieu_huong">
+            <div class="anh">
+                <img src="../img/logo_hoa_sen.png" alt="">
+                <div class="text">
+                    <h1><i>Áo Dài Việt</i></h1>
+                    <p><i>Tôn vinh nét đẹp Việt</i></p>
+                </div>
+            </div>
+            <nav class="menu"> 
+                <li><a href="../Trang_chu/index.html">Trang chủ</a></li>
+                <li><a href="../San_pham/index.html">Sản phẩm</a></li>
+                <li><a href="../Gioithieu/index.html">Giới thiệu</a></li>
+                <li><a href="../Lienhe/index.html">Liên hệ</a></li>
+            </nav>
+            <div class="icon">
+                <a href="#" class="icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <a href="../Gio_hang/index.html" class="icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge"></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Phần tiêu đề của trang -->
+        <div class="image">
+            <img src="../img/anh1.png" alt="">
+            <h1>Tìm Kiếm Sản Phẩm</h1>
+            <p>Khám phá bộ sưu tập áo dài đa dạng phù hợp với mọi phong cách</p>
+        </div>
+
+    <!-- Noi dung tim kiem -->
+    <div class="container">
+
+        <!-- Thanh tim kiem -->
+        <div class="thanh-tim-kiem">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text" id="tuKhoa"
+                placeholder="Ví dụ: áo dài truyền thống..."
+                onkeydown="if(event.key === 'Enter') timSanPham()">
+
+            <button onclick="timSanPham()">Tìm kiếm</button>
+        </div>
+
+        <!-- Tu khoa goi y -->
+        <div class="goi-y">
+            <span>Tìm nhanh:</span>
+            <button onclick="timNhanh('truyền thống')">Truyền thống</button>
+            <button onclick="timNhanh('cách tân')">Cách tân</button>
+            <button onclick="timNhanh('lụa')">Áo dài lụa</button>
+            <button onclick="timNhanh('gấm')">Áo dài gấm</button>
+        </div>
+
+        <p id="thongBao"></p>
+
+        <!-- Danh sach san pham -->
+        <div class="danh-sach-san-pham" id="danhSach">
+
+            <div class="san-pham">
+                <a href="../San_pham/index.html">
+                    <img src="aodai6.jpg" alt="Áo dài truyền thống">
+                </a>
+                <h3>Áo dài truyền thống</h3>
+                <p class="gia">450.000đ</p>
+                <a class="nut-xem" href="../San_pham/index.html">
+                    Xem sản phẩm
+                </a>
+            </div>
+
+            <div class="san-pham">
+                <a href="../San_pham/index.html">
+                    <img src="aodai9.jpg" alt="Áo dài cách tân">
+                </a>
+                <h3>Áo dài cách tân</h3>
+                <p class="gia">550.000đ</p>
+                <a class="nut-xem" href="../San_pham/index.html">
+                    Xem sản phẩm
+                </a>
+            </div>
+
+            <div class="san-pham">
+                <a href="../San_pham/index.html">
+                    <img src="aodai8.jpg" alt="Áo dài lụa">
+                </a>
+                <h3>Áo dài lụa</h3>
+                <p class="gia">1.550.000đ</p>
+                <a class="nut-xem" href="../San_pham/index.html">
+                    Xem sản phẩm
+                </a>
+            </div>
+
+            <div class="san-pham">
+                <a href="../San_pham/index.html">
+                    <img src="aodai7.jpg" alt="Áo dài gấm">
+                </a>
+                <h3>Áo dài gấm</h3>
+                <p class="gia">850.000đ</p>
+                <a class="nut-xem" href="../San_pham/index.html">
+                    Xem sản phẩm
+                </a>
+            </div>
+
+        </div>
+
+        <div class="nut-quay-lai">
+            <a href="../Trang_chu/index.html">
+                <i class="fa-solid fa-arrow-left"></i>
+                Quay lại trang chủ
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>
