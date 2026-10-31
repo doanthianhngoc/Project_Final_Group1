@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập - Áo Dài Việt</title>
+    <title>Đăng ký - Áo Dài Việt</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet"
@@ -57,7 +57,7 @@
 
 
     <!-- Phần đăng nhập -->
-    <div class="khung_dang_nhap">
+    <div class="khung_dang_ky">
 
         <div class="hinh_anh">
             <i class="fa-solid fa-spa"></i>
@@ -68,59 +68,49 @@
             </p>
         </div>
 
-        <div class="form_dang_nhap">
+        <div class="form_dang_ky">
 
-            <h2>Đăng nhập</h2>
+            <h2>Đăng Ký</h2>
             <p class="mo_ta">Chào mừng bạn quay trở lại!</p>
 
-            <form id="formDangNhap">
-
+            <form id="formDangKy">
+                <!-- Nhập tên đăng ký -->
                 <div class="nhap_lieu">
-                    <label for="taiKhoan">Tên đăng nhập hoặc email</label>
-
+                    <label for="taiKhoan">Tên đăng ký</label>
                     <div class="o_nhap">
                         <i class="fa-regular fa-user"></i>
-
-                        <input type="text" id="taiKhoan"
-                        placeholder="Nhập tài khoản hoặc email">
+                        <input type="text" id="taiKhoan"placeholder="Nhập tên tài khoản">
                     </div>
-
                     <p class="loi" id="loiTaiKhoan"></p>
                 </div>
-
+                <!-- Nhập Email -->
+                <div class="nhap_lieu">
+                    <label for="email">Email</label>
+                    <div class="o_nhap">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" id="email"placeholder="Nhập email">
+                    </div>
+                    <p class="loi" id="loiEmail"></p>
+                </div>
+                <!-- Nhập mật khẩu -->
                 <div class="nhap_lieu">
                     <label for="matKhau">Mật khẩu</label>
-
                     <div class="o_nhap">
                         <i class="fa-solid fa-lock"></i>
-
-                        <input type="password" id="matKhau"
-                        placeholder="Nhập mật khẩu">
-
-    
+                        <input type="password" id="matKhau"placeholder="Nhập mật khẩu">
                     </div>
-
                     <p class="loi" id="loiMatKhau"></p>
                 </div>
-
-
-                <button type="submit" class="btn_dang_nhap">
-                    Đăng nhập
+                <!-- Nút đăng ký -->
+                <button type="submit" class="btn_dang_ky">
+                    Đăng Ký
                 </button>
-
                 <p id="thongBao"></p>
-
-
-                <a href="../Trang_chu/index.html" class="quay_lai">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    Quay về trang chủ
-                </a>
-
-                <a href="../Quan_ly_nguoi_dung/index.html" class="quay_lai">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    Danh sách người dùng
-                </a>
-
+                <!-- Nút đăng nhập -->
+                <div class="dang_nhap">
+                    Bạn đã có tài khoản?
+                    <a href="#" id="nutDangNhap">Đăng nhập ngay</a>
+                </div>
             </form>
 
         </div>

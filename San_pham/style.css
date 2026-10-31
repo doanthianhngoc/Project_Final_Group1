@@ -337,3 +337,234 @@ body {
         flex-direction: column;
     }
 }
+/* Bổ sung lọc, phân trang và thẻ sản phẩm */
+.container-fluid{
+    display:flex;
+    gap:24px;
+    margin-top:25px;
+    padding:0
+}
+.tat_ca_danh_muc{
+    width:280px;
+    flex-shrink:0;
+    display:flex;
+    flex-direction:column;
+    gap:18px
+}
+.danh_muc,.gia{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    padding:18px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    background:#f8f5f6
+}
+.danh_muc h2,.gia h2{
+    font-size:30px;
+    font-weight:bold;
+    color: black;
+}
+.danh_muc label,.gia label{
+    font-size:20px;
+    margin:0;
+    cursor:pointer;
+    color: black;
+}
+.btn-loc,.btn-reset,.btn-them-gio{
+    border:0;
+    border-radius:5px;
+    padding:10px 15px;
+    background:#a33d4b;
+    color:white;
+    cursor:pointer;
+    font-size: 20px;
+    
+}
+.btn-reset{
+    background:#757070
+    
+}
+.san_pham{
+    flex:1;
+    min-width:0
+}
+#aodai .card{
+    height:100%;
+    transition:.2s
+}
+#aodai .card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 18px #0002
+}
+#aodai .card-img-top{
+    height:300px;
+    object-fit:cover
+}
+
+#aodai h5{
+    font-size: 23px;
+}
+.gia-san-pham{
+    color:#bd456d;
+    font-size:21px;
+    font-weight:bold
+}
+.pagination{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin:20px
+}
+.pagination button{
+    padding:7px 14px;
+    border:1px solid #bf7781;
+    background:white;
+    color:#a65873
+}
+.pagination button.dang-chon{
+    background:#bd0e0e;
+    color:white
+}
+@media(max-width:768px){
+    .container-fluid{flex-direction:column}
+    .tat_ca_danh_muc{
+        width:100%
+    }
+    .thanh_dieu_huong{
+        flex-wrap:wrap
+    }
+    .menu{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px
+    }
+    .image h1{
+        font-size:38px
+    }
+    .image p{
+        font-size:16px
+    }
+}
+
+/* ===== CHI TIẾT SẢN PHẨM ===== */
+
+/* Con trỏ khi bấm vào ảnh và tên */
+.anh-xem-chi-tiet,
+.ten-xem-chi-tiet {
+    cursor: pointer;
+}
+
+/* Hiệu ứng tên sản phẩm */
+.ten-xem-chi-tiet:hover {
+    color: #a33d4b;
+}
+
+/* Lớp nền tối */
+.chi-tiet-overlay {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    inset: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.62);
+
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+/* Khi mở hộp thoại */
+.chi-tiet-overlay.dang-mo {
+    display: flex;
+}
+
+/* Khung nội dung */
+.chi-tiet-noi-dung {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    padding: 38px;
+    background: white;
+    border-radius: 14px;
+}
+
+/* Nút đóng */
+.chi-tiet-dong {
+    position: absolute;
+    top: 7px;
+    right: 15px;
+
+    border: 0;
+    background: transparent;
+    font-size: 35px;
+    cursor: pointer;
+    color: #51464a;
+}
+
+/* Bố cục ảnh và thông tin */
+.chi-tiet-khung {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: center;
+}
+
+/* Ảnh sản phẩm */
+.chi-tiet-anh img {
+    display: block;
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Tiêu đề */
+.chi-tiet-thong-tin h2 {
+    color: #51464a;
+    font-size: 29px;
+    margin: 8px 0 12px;
+}
+
+/* Nội dung */
+.chi-tiet-thong-tin p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Giá sản phẩm */
+.chi-tiet-thong-tin .chi-tiet-gia {
+    color: #bd456d;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Nhãn thương hiệu */
+.chi-tiet-nhan {
+    color: #a33d4b;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Giao diện điện thoại */
+@media (max-width: 650px) {
+
+    .chi-tiet-noi-dung {
+        padding: 45px 18px 22px;
+    }
+
+    .chi-tiet-khung {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .chi-tiet-anh img {
+        max-height: 300px;
+    }
+
+}

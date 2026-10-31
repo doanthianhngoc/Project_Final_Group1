@@ -15,18 +15,14 @@ const formTitle = document.getElementById("formTitle");
 const saveButton = document.getElementById("saveButton");
 const resetButton = document.getElementById("resetButton");
 
-// Đọc dữ liệu an toàn từ localStorage
 function docNguoiDung() {
-    try {
-        const data = JSON.parse(
-            localStorage.getItem(KEY_USERS) || "[]"
-        );
+    let data = localStorage.getItem(KEY_USERS);
 
-        return Array.isArray(data) ? data : [];
-    } catch (error) {
-        console.error("Không thể đọc dữ liệu người dùng:", error);
+    if (data == null) {
         return [];
     }
+
+    return JSON.parse(data);
 }
 
 let users = docNguoiDung();
@@ -146,16 +142,21 @@ form.addEventListener("submit", function (event) {
 
     // Kiểm tra tài khoản bị trùng
     // Bỏ qua chính người dùng đang sửa
-    const trungTaiKhoan = users.some(user =>
-        String(user.taiKhoan || "").toLowerCase() === taiKhoan.toLowerCase()
-        && String(user.id) !== id
-    );
+    let trungTaiKhoan = false;
 
-    if (trungTaiKhoan) {
-        hienThongBao("Tài khoản này đã tồn tại!", "danger");
-        email.focus();
-        return;
+for (let i = 0; i < users.length; i++) {
+    if (users[i].taiKhoan.toLowerCase() == taiKhoan.toLowerCase()
+        && users[i].id != id) {
+        trungTaiKhoan = true;
+        break;
     }
+}
+
+if (trungTaiKhoan) {
+    hienThongBao("Tài khoản này đã tồn tại!", "danger");
+    email.focus();
+    return;
+}
 
     // Nếu có ID thì đang sửa
     if (id !== "") {
@@ -240,11 +241,16 @@ form.addEventListener("submit", function (event) {
 
 // Đưa dữ liệu người dùng lên form để sửa
 function suaNguoiDung(id) {
-    const user = users.find(
-        item => String(item.id) === String(id)
-    );
+    let user = null;
 
-    if (!user) {
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].id == id) {
+            user = users[i];
+            break;
+        }
+    }
+
+    if (user == null) {
         hienThongBao("Không tìm thấy người dùng!", "danger");
         return;
     }

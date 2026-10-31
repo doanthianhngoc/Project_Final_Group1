@@ -119,124 +119,141 @@ body {
     font-style: italic;
 }
 
-/* Bảng */
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 2px solid black;
-    margin-top: 60px;
-}
-
-table th,
-table td {
-    border: 2px solid black;
-    padding: 12px 15px;
-    text-align: center;
-    vertical-align: middle;
+/* Bổ sung bảng giỏ hàng */
+.noi-dung-gio-hang{
+    margin-top:30px
 }
 
 
-.sanpham{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-
-}
-.sanpham img{
-    width: 100px;
-    height: 120px;
-    object-fit: cover;
-    
-    
-}
-
-.sanpham p{
-    text-align: center;
+.table-responsive{
+    width:100%;
+    overflow-x:auto
 }
 
 
-
-/* Khu vực phía dưới bảng giỏ hàng */
-.cart-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-    width: 100%;
-    margin-top: 25px;
-    font-family: Arial, sans-serif;
+table.table{
+    width:100%;
+    min-width:750px;
+    border-collapse:collapse
 }
 
 
-/* Khung thanh toán */
-.checkout {
-    width: 350px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-/* Tiêu đề */
-.checkout h3 {
-    margin: 0 0 15px;
+table.table th,
+table.table td{
     font-size: 20px;
-    color: #333;
-}
-
-/* Tạm tính và phí vận chuyển */
-.checkout-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    color: #777;
-    font-size: 14px;
-}
-
-.checkout hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 15px 0;
-}
-
-/* Thành tiền */
-.total-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 18px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.total-row span:last-child {
-    color: #c83e70;
-    font-size: 18px;
-}
-
-/* Nút thanh toán */
-.checkout-button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    background-color: #c83e70;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.checkout-button:hover {
-    background-color: #a72e5b;
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+    vertical-align:middle
 }
 
 
-/* Giao diện điện thoại */
-@media (max-width: 768px) {
+table.table thead th{
+    background:#bc5663;
+    color:white
+}
+
+
+.cot-san-pham{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-align:left!important
+}
+
+
+.cot-san-pham img{
+    width:80px;
+    height:100px;
+    object-fit:cover
+}
+
+
+.nut-so-luong{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px
+}
+
+
+.nut-so-luong button{
+    padding:4px 12px;
+    border:1px solid #981829;
+    border-radius:4px;
+    background:white;
+    color:#a52234;
+}
+
+
+.nut-xoa{
+    border:0;
+    border-radius:4px;
+    padding:7px 12px;
+    background:#a00d2a;
+    color:white
+}
+
+
+.gio-hang-trong{
+    display:none;
+    text-align:center;
+    padding:25px;
+    font-size: 20px;
+}
+
+.gio-hang-trong a{
+    font-size: 20px;
+}
+
+
+.cart-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:25px;
+    margin-top:25px;
+font-size: 20px;
+}
+
+
+.checkout{
+    width:100%;
+    max-width:360px;
+    padding:20px;
+    border:1px solid #ddd;
+    border-radius:8px
+}
+
+
+.checkout-row,
+.total-row{
+    display:flex;
+    justify-content:space-between;
+    margin:12px 0
+}
+
+
+.total-row{
+    font-size:20px;
+    font-weight:bold;
+    color:hsl(352, 82%, 37%);
+}
+
+
+.checkout-button{
+    width:100%;
+    padding:12px;
+    border:0;
+    border-radius:5px;
+    background:#6e0e1b;
+    color:white;
+    cursor:pointer
+}
+
+
+@media(max-width:768px){
     .thanh_dieu_huong {
         flex-wrap: wrap;
     }
@@ -277,41 +294,25 @@ table td {
         left: 30px;
     }
 
-    /* Bảng */
-    table {
-    width: 100px;
-    height: 50px;
+   
+    .cart-bottom{
+        flex-direction:column
     }
-    table th,
-    table td {
-    font-size: 10px;
+   
+    .checkout{
+        max-width:none
     }
-
-
-.sanpham{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-}
-.sanpham img{
-    width: 50px;
-    height: 60px;
-    object-fit: cover;
-    
-    
-}
-
-.sanpham p{
-    text-align: center;
-    font-size:10px ;
-}
-    
-}
-
-@media (max-width: 400px) {
-    .tuy_chon {
-        align-items: flex-start;
-        flex-direction: column;
+   
+    .cot-san-pham{
+        flex-direction:column;
+        text-align:center!important
+    }
+   
+    .image h1{
+        font-size:38px
+    }
+   
+    .image p{
+        font-size:16px
     }
 }

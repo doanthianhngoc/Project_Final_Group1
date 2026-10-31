@@ -60,59 +60,69 @@
 
         <!-- Danh mục sản phẩm -->
 
-        <div class="container-fluid">
-            <!-- Danh mục và lọc sản phẩm -->
-            <div class="tat_ca_danh_muc">
-                <div class="danh_muc">
-                    <h1>Danh mục</h1>
-                    <ul class="category-menu">
-                        <li><i class="fa-solid fa-shirt"></i> Áo dài truyền thống</li>
-                        <li><i class="fa-solid fa-shirt"></i> Áo dài cách tân</li>
-                        <li><i class="fa-regular fa-gem"></i> Áo dài gấm</li>
-                        <li><i class="fa-solid fa-spa"></i> Áo dài lụa</li>
-                    </ul>
-                </div>
-                <div class="gia">
-                    <h1>Khoảng giá</h1>
+        <main class="container-fluid">
+            <aside class="tat_ca_danh_muc">
+            <div class="danh_muc">
+                <h2>Danh mục</h2>
+                <label><input type="radio" name="category" value="all" checked> Tất cả sản phẩm</label>
+                <label><input type="radio" name="category" value="truyen-thong"> Áo dài truyền thống</label>
+                <label><input type="radio" name="category" value="cach-tan"> Áo dài cách tân</label>
+                <label><input type="radio" name="category" value="gam"> Áo dài gấm</label>
+                <label><input type="radio" name="category" value="lua"> Áo dài lụa</label>
+            </div>
 
 
-                        <div class="nut">
-                            <input type="radio" name="price" id="price1" value="300000">
-                            <label for="price1">Dưới 300.000đ</label>
-                        </div>
-                        <div class="nut">
-                            <input type="radio" name="price" id="price2" value="300000-500000">
-                            <label for="price2">300.000đ - 500.000đ</label>
-                        </div>
-                        <div class="nut">
-                            <input type="radio" name="price" id="price3" value="500000-700000">
-                            <label for="price3">500.000đ - 700.000đ</label>
-                        </div>
-                        <div class="nut">
-                            <input type="radio" name="price" id="price4" value="700000">
-                            <label for="price4">Trên 700.000đ</label>
-                        </div>
-                </div>
-                <div class="loc">
-                    <button class="btn-loc">Lọc</button>
-                </div>
-        </div>
+            <div class="gia">
+                <h2>Khoảng giá</h2>
+                <label><input type="radio" name="price" value="all" checked> Tất cả mức giá</label>
+                <label><input type="radio" name="price" value="under300"> Dưới 300.000đ</label>
+                <label><input type="radio" name="price" value="300-500"> 300.000đ - 500.000đ</label>
+                <label><input type="radio" name="price" value="500-700"> 500.000đ - 700.000đ</label>
+                <label><input type="radio" name="price" value="over700"> Trên 700.000đ</label></div>
+                <button class="btn-loc" onclick="locSanPham()">Lọc sản phẩm</button>
+                <button class="btn-reset" onclick="boLoc()">Bỏ lọc</button>
+            </aside>
+
+
+            <section class="san_pham">
+                <p id="thongBaoLoc"></p>
+
+
+            <div class="row" id="aodai">
             
-            <!-- Sản phẩm -->
-            <div class="san_pham">
-                <div class="row" id="aodai">
+            </div>
 
-                </div>
+
+            <div class="pagination" id="phanTrang">
+
+
+            </div>
+
+
+            </section>
+        </main>
+
+    <!-- Hộp thoại chi tiết sản phẩm -->
+        <div id="hopThoaiChiTiet"
+            class="chi-tiet-overlay"
+            onclick="dongChiTietNeuBamNen(event)">
+
+            <div class="chi-tiet-noi-dung">
+
+                <!-- Nút đóng -->
+                <button type="button"
+                        class="chi-tiet-dong"
+                        onclick="dongChiTiet()"
+                        aria-label="Đóng">
+                    &times;
+                </button>
+
+                <!-- Nội dung chi tiết sản phẩm sẽ được JavaScript hiển thị -->
+                <div id="noiDungChiTiet"></div>
+
             </div>
         </div>
-        <!-- Nút chuyển trang  -->
-        <div class="button">
-            <button onclick="" id="sangtrai"><i class="fa-solid fa-chevron-left"></i></button>
-            <button onclick="" id="trang1">1</button>
-            <button onclick="" id="trang2">2</button>
-            <button onclick="" id="trang3">3</button>
-            <button onclick="" id="sangtrai"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
+
     <script src="script.js"></script>
 </body>
 </html>

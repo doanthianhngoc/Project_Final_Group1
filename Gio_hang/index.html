@@ -59,75 +59,62 @@
 
 
        <!-- Bảng chứa sản phẩm -->
-        <table class="table">
-        <thead>
-            <tr>
-            <th scope="col">Số thứ tự</th>
-            <th scope="col">Sản phẩm</th>
-            <th scope="col">Đơn giá</th>
-            <th scope="col">Số lượng</th>
-            <th scope="col">Thành tiền</th>
-            <th scope="col">Xóa</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <th scope="row">1</th>
-            <td>
-                <div class="sanpham">
-                    <img src="../img/aodai1.jpg" alt="">
-                    <p>Áo dài truyền thống</p>
-                    <p>Size: L</p>
-                </div>
-            </td>
-            <td><p>450.000đ</p></td>
-            <td>
-            <!-- Nút chỉnh số lượng  -->
-            <div class="button">
-                <button onclick="" id="sangtrai">+</button>
-                <button onclick="" id="trang1">1</button>
-                <button onclick="" id="sangtrai">+</button>
+        
+        <main class="noi-dung-gio-hang">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                            <th>Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody id="danhSachGioHang">
+
+
+                    </tbody>
+                </table>
             </div>
-            </td>
-            <td><p>450.000đ</p></td>
-            <td><p>Xóa</p></td>
-            </tr>
-            <tr>
-        </tbody>
-        </table>
-        <!--Thanh toán-->
-        <div class="cart-bottom">
-
-            <!-- Tổng tiền và thanh toán -->
-            <div class="checkout">
-                <h3>Tổng cộng</h3>
-
-                <div class="checkout-row">
-                    <span>Tạm tính</span>
-                    <span>450.000đ</span>
+            <p id="gioHangTrong" class="gio-hang-trong">
+                Giỏ hàng của bạn đang trống.
+                <a href="../San_pham/index.html">
+                    Tiếp tục mua hàng
+                </a>
+            </p>
+            <div class="cart-bottom">
+                <a class="tiep-tuc" href="../San_pham/index.html">
+                    ← Tiếp tục mua hàng
+                </a>
+                <div class="checkout">
+                    <h3>Tổng cộng</h3>
+                    <div class="checkout-row">
+                        <span>Tạm tính</span>
+                        <span id="tamTinh">0đ</span>
+                    </div>
+                    <div class="checkout-row">
+                        <span>Phí vận chuyển</span>
+                        <span id="phiVanChuyen">0đ</span>
+                    </div>
+                    <hr>
+                    <div class="total-row">
+                        <span>Thành tiền</span>
+                        <span id="tongTien">0đ</span>
+                    </div>
+                    <button class="checkout-button" onclick="thanhToan()">Thanh toán</button>
                 </div>
-
-                <div class="checkout-row">
-                    <span>Phí vận chuyển</span>
-                    <span>0đ</span>
-                </div>
-
-                <hr>
-
-                <div class="total-row">
-                    <span>Thành tiền</span>
-                    <span>450.000đ</span>
-                </div>
-
-                
-                    <a href="../Dat_hang/index.html">
-                        <button class="checkout-button">
-                            🔒 Thanh toán
-                        </button>
-                    </a> 
-                
             </div>
-        </div>
+        </main>
+
+
+        <!-- Kết nối JavaScript giỏ hàng -->
+        <script src="script.js"></script>
+        </body>
+        </html>
+
 
 </body>
 </html>

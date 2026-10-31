@@ -92,7 +92,7 @@ body {
 
 
 /* Khung đăng nhập */
-.khung_dang_nhap {
+.khung_dang_ky {
     display: flex;
     max-width: 80%;
     margin: 40px auto;
@@ -134,12 +134,12 @@ body {
 }
 
 /* Form đăng nhập bên phải */
-.form_dang_nhap {
+.form_dang_ky {
     width: 60%;
     padding: 40px;
 }
 
-.form_dang_nhap h2 {
+.form_dang_ky h2 {
     color: #a52a45;
     font-size: 50px;
     margin-bottom: 10px;
@@ -220,18 +220,18 @@ body {
 }
 
 .tuy_chon a,
-.dang_ky a {
+.dang_nhap a {
     color: #b52f67;
     text-decoration: none;
 }
 
 .tuy_chon a:hover,
-.dang_ky a:hover {
+.dang_nhap a:hover {
     text-decoration: underline;
 }
 
 /* Nút đăng nhập */
-.btn_dang_nhap {
+.btn_dang_ky {
     width: 100%;
     padding: 13px;
     background-color: #bd405c;
@@ -243,7 +243,7 @@ body {
     cursor: pointer;
 }
 
-.btn_dang_nhap:hover {
+.btn_dang_ky:hover {
     background-color: #a52a45;
 }
 
@@ -297,12 +297,12 @@ footer {
         margin-bottom: 20px;
     }
 
-    .khung_dang_nhap {
+    .khung_dang_ky {
         flex-direction: column;
     }
 
     .hinh_anh,
-    .form_dang_nhap {
+    .form_dang_ky {
         width: 100%;
     }
 
@@ -310,7 +310,7 @@ footer {
         padding: 25px;
     }
 
-    .form_dang_nhap {
+    .form_dang_ky {
         padding: 25px;
     }
 }

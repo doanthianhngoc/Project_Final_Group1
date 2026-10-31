@@ -1,71 +1,140 @@
 
-let form = document.getElementById("formDangNhap");
+const KEY_USERS = "taiKhoanAoDai";
+const KEY_CURRENT_USER = "nguoiDungDangNhap";
 
-let taiKhoan = document.getElementById("taiKhoan");
-let matKhau = document.getElementById("matKhau");
+// Lấy danh sách tài khoản
+function layDanhSachNguoiDung() {
+    return JSON.parse(localStorage.getItem(KEY_USERS)) || [];
+}
 
-let loiTaiKhoan = document.getElementById("loiTaiKhoan");
-let loiMatKhau = document.getElementById("loiMatKhau");
-let thongBao = document.getElementById("thongBao");
+// Lưu danh sách tài khoản
+function luuDanhSachNguoiDung(dsNguoiDung) {
+    localStorage.setItem(KEY_USERS, JSON.stringify(dsNguoiDung));
+}
 
-// Kiểm tra khi nhấn nút đăng nhập
-form.addEventListener("submit", function (event) {
-    event.preventDefault();
+let dangKy = true;
 
-    // Xóa thông báo cũ
-    loiTaiKhoan.textContent = "";
-    loiMatKhau.textContent = "";
-    thongBao.textContent = "";
+// Lấy các phần tử HTML
+const form = document.getElementById("formDangKy");
+const taiKhoan = document.getElementById("taiKhoan");
+const email=document.getElementById("email");
+const matKhau = document.getElementById("matKhau");
+const loiTaiKhoan = document.getElementById("loiTaiKhoan");
+const loiEmail=document.getElementById("loiEmail");
+const loiMatKhau = document.getElementById("loiMatKhau");
+const thongBao = document.getElementById("thongBao");
+const nutDangKy = document.getElementById("nutDangKy");
 
-    let ten = taiKhoan.value.trim();
-    let mk = matKhau.value.trim();
+// Chuyển đổi giữa đăng ký và đăng nhập
+if (nutDangKy) {
+    nutDangKy.addEventListener("click", function (e) {
+        e.preventDefault();
 
-    let hopLe = true;
+        dangKy = !dangKy;
 
-    // Kiểm tra tài khoản
-    if (ten == "") {
-        loiTaiKhoan.textContent = "Vui lòng nhập tài khoản!";
-        hopLe = false;
-    }
+        document.querySelector(".form_dang_nhap h2").textContent =
+            dangKy ? "Đăng Ký" : "Đăng Nhập";
 
-    // Kiểm tra mật khẩu
-    if (mk == "") {
-        loiMatKhau.textContent = "Vui lòng nhập mật khẩu!";
-        hopLe = false;
-    }
+        form.querySelector("button[type='submit']").textContent =
+            dangKy ? "Đăng Ký" : "Đăng Nhập";
 
-    // Nếu thông tin hợp lệ thì lưu người dùng
-    if (hopLe == true) {
+        nutDangKy.textContent =
+            dangKy ? "Đăng nhập ngay" : "Đăng ký ngay";
 
-        // Lấy danh sách người dùng đã lưu
-        let danhSach = JSON.parse(
-            localStorage.getItem("taiKhoanAoDai")
-        ) || [];
+        thongBao.textContent = "";
+        loiTaiKhoan.textContent = "";
+        loiMatKhau.textContent = "";
+    });
+}
 
-        // Tìm tài khoản đã tồn tại
-        let nguoiDung = danhSach.find(function (user) {
-            return user.taiKhoan == ten;
-        });
+// Xử lý đăng ký và đăng nhập
+if (form) {
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-        // Nếu chưa có thì thêm vào danh sách
-        if (!nguoiDung) {
-            nguoiDung = {
-                id: Date.now(),
-                taiKhoan: ten,
-                vaiTro: "Khách hàng"
-            };
+        const tenTaiKhoan = taiKhoan.value.trim();
+        const matKhauNhap = matKhau.value.trim();
 
-            danhSach.push(nguoiDung);
+        loiTaiKhoan.textContent = "";
+        loiMatKhau.textContent = "";
+        thongBao.textContent = "";
 
-            // Lưu danh sách vào localStorage
-            localStorage.setItem(
-                "taiKhoanAoDai",
-                JSON.stringify(danhSach)
-            );
+        let hopLe = true;
+
+        if (tenTaiKhoan === "") {
+            loiTaiKhoan.textContent = "Vui lòng nhập tài khoản!";
+            hopLe = false;
         }
 
-        thongBao.style.color = "#b52f67";
-        thongBao.textContent =
-            "Thông tin người dùng đã được lưu vào hệ thống!";
-    }
-});
+        if (matKhauNhap === "") {
+            loiMatKhau.textContent = "Vui lòng nhập mật khẩu!";
+            hopLe = false;
+        } else if (matKhauNhap.length < 6) {
+            loiMatKhau.textContent = "Mật khẩu phải có ít nhất 6 ký tự!";
+            hopLe = false;
+        }
+
+        if (!hopLe) return;
+
+        let dsNguoiDung = layDanhSachNguoiDung();
+
+        // CHỨC NĂNG ĐĂNG KÝ
+        if (dangKy) {
+            const daTonTai = dsNguoiDung.some(
+                user => user.taiKhoan.toLowerCase() === tenTaiKhoan.toLowerCase()
+            );
+
+            if (daTonTai) {
+                loiTaiKhoan.textContent = "Tài khoản đã tồn tại!";
+                return;
+            }
+
+            const nguoiDungMoi = {
+                id: Date.now(),
+                taiKhoan: tenTaiKhoan,
+                matKhau: matKhauNhap,
+                vaiTro: "user"
+            };
+
+            dsNguoiDung.push(nguoiDungMoi);
+            luuDanhSachNguoiDung(dsNguoiDung);
+
+            thongBao.style.color = "green";
+            thongBao.textContent = "Đăng ký thành công! Hãy đăng nhập.";
+
+            form.reset();
+        }
+
+        // CHỨC NĂNG ĐĂNG NHẬP
+        else {
+            const nguoiDung = dsNguoiDung.find(
+                user =>
+                    user.taiKhoan.toLowerCase() === tenTaiKhoan.toLowerCase() &&
+                    user.matKhau === matKhauNhap
+            );
+
+            if (!nguoiDung) {
+                thongBao.style.color = "red";
+                thongBao.textContent = "Tài khoản hoặc mật khẩu không chính xác!";
+                return;
+            }
+
+            // Lưu thông tin người đang đăng nhập
+            localStorage.setItem(
+                KEY_CURRENT_USER,
+                JSON.stringify({
+                    id: nguoiDung.id,
+                    taiKhoan: nguoiDung.taiKhoan,
+                    vaiTro: nguoiDung.vaiTro
+                })
+            );
+
+            thongBao.style.color = "green";
+            thongBao.textContent = "Đăng nhập thành công!";
+
+            setTimeout(() => {
+                window.location.href = "../Trang_chu/index.html";
+            }, 1000);
+        }
+    });
+}
