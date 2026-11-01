@@ -4,70 +4,16 @@
     box-sizing: border-box;
 }
 body {
-    font-family: Arial, sans-serif;
-    color: #51464a;
-    background-color: #ffffff;
     margin: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
-/* CSS Thanh điều hướng */
-.thanh_dieu_huong{
-    display: flex;
-    flex-direction:row ;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px; 
-    line-height: normal;
 
-}
-.anh{
-    display: flex;
-    flex-direction: row;  
-    align-items: center;  
-    
-}
+/* CSS Thanh điều hướng */
 .about-button:hover {
     background-color: #a72e5b;
 }
-.anh .text{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    white-space: nowrap;
-}
 
-.text h1{
-    font-size: 40px;
-    color: hsl(334, 47%, 63%);
-    font-weight: bold;
-    line-height: normal;
-    margin: 0;
-}
-.text p{
-    font-size: 20px;
-    color: hsl(334, 47%, 63%);
-    line-height: normal;
-    margin: 0;
-}
-
-.anh img{
-    height: 150px;
-
-    
-}
-.menu {
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-    list-style: none;
-    margin-left: 10px;
-    padding: 0;
-}
-
-.menu li {
-    list-style: none;
-    font-size: 25px;
-    font-weight: bold;
-}
 
 .menu a {
     color: #51464a;
@@ -77,13 +23,7 @@ body {
 .menu a:hover {
     color: #c83e70;
 }
-.icon{
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
-    color: black;
-    gap: 20px;
-}
+
 
 /* Banner */
 
@@ -264,79 +204,6 @@ body {
     padding: 5px 10px;
 }
 
-
-/* Giao diện điện thoại */
-@media (max-width: 768px) {
-    .thanh_dieu_huong {
-        flex-wrap: wrap;
-    }
-
-    .menu {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .khung_dang_nhap {
-        flex-direction: column;
-    }
-
-    .hinh_anh,
-    .form_dang_nhap {
-        width: 100%;
-    }
-
-    .hinh_anh {
-        padding: 25px;
-    }
-
-    .form_dang_nhap {
-        padding: 25px;
-    }
-
-    .image h1{
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
-    .image p{
-        font-size: 18px;
-    }
-
-    .tat_ca_danh_muc h1{
-        
-         font-size: 27px;
-    }
-
-    .nut{
-    font-size: 20px;
-    }
-
-    .category-menu li{
-    font-size: 20px;
-    }
-
-    .row p {
-    font-size: 20px;
-    margin-top: 15px;
-}
-
-.row h5 {
-    font-size: 20px;
-    color: black;
-}
-
-    
-}
-
-@media (max-width: 400px) {
-    .tuy_chon {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-}
 /* Bổ sung lọc, phân trang và thẻ sản phẩm */
 .container-fluid{
     display:flex;

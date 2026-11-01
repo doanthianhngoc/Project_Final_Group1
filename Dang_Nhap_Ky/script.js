@@ -1,140 +1,114 @@
-
 const KEY_USERS = "taiKhoanAoDai";
 const KEY_CURRENT_USER = "nguoiDungDangNhap";
 
-// Lấy danh sách tài khoản
-function layDanhSachNguoiDung() {
-    return JSON.parse(localStorage.getItem(KEY_USERS)) || [];
-}
 
-// Lưu danh sách tài khoản
-function luuDanhSachNguoiDung(dsNguoiDung) {
-    localStorage.setItem(KEY_USERS, JSON.stringify(dsNguoiDung));
-}
-
+const $ = id => document.getElementById(id);
+const form = $("formDangKy");
+const thongBao = $("thongBao");
 let dangKy = true;
 
-// Lấy các phần tử HTML
-const form = document.getElementById("formDangKy");
-const taiKhoan = document.getElementById("taiKhoan");
-const email=document.getElementById("email");
-const matKhau = document.getElementById("matKhau");
-const loiTaiKhoan = document.getElementById("loiTaiKhoan");
-const loiEmail=document.getElementById("loiEmail");
-const loiMatKhau = document.getElementById("loiMatKhau");
-const thongBao = document.getElementById("thongBao");
-const nutDangKy = document.getElementById("nutDangKy");
 
-// Chuyển đổi giữa đăng ký và đăng nhập
-if (nutDangKy) {
-    nutDangKy.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        dangKy = !dangKy;
-
-        document.querySelector(".form_dang_nhap h2").textContent =
-            dangKy ? "Đăng Ký" : "Đăng Nhập";
-
-        form.querySelector("button[type='submit']").textContent =
-            dangKy ? "Đăng Ký" : "Đăng Nhập";
-
-        nutDangKy.textContent =
-            dangKy ? "Đăng nhập ngay" : "Đăng ký ngay";
-
-        thongBao.textContent = "";
-        loiTaiKhoan.textContent = "";
-        loiMatKhau.textContent = "";
-    });
+function layNguoiDung() {
+    try { return JSON.parse(localStorage.getItem(KEY_USERS)) || []; }
+    catch { return []; }
 }
+function luuNguoiDung(ds) {
+    localStorage.setItem(KEY_USERS, JSON.stringify(ds));
+}
+function hienLoi(id, text) { $(id).textContent = text; }
+function xoaLoi() {
+    ["loiHoTen","loiTaiKhoan","loiEmail","loiMatKhau","loiNhapLai"].forEach(id => hienLoi(id,""));
+    thongBao.textContent = "";
+    thongBao.className = "";
+}
+function doiCheDo(isRegister) {
+    dangKy = isRegister;
+    form.reset();
+    xoaLoi();
+    $("tieuDeForm").textContent = dangKy ? "Đăng ký" : "Đăng nhập";
+    $("moTaForm").textContent = dangKy ? "Tạo tài khoản để trải nghiệm Áo Dài Việt." : "Chào mừng bạn quay trở lại!";
+    $("btnSubmit").textContent = dangKy ? "Đăng ký" : "Đăng nhập";
+    $("nhomHoTen").hidden = !dangKy;
+    $("nhomEmail").hidden = !dangKy;
+    $("nhomNhapLai").hidden = !dangKy;
+    $("dongChuyenDoi").textContent = dangKy ? "Đã có tài khoản?" : "Chưa có tài khoản?";
+    $("nutChuyenDoi").textContent = dangKy ? "Đăng nhập ngay" : "Đăng ký ngay";
+}
+$("nutChuyenDoi").addEventListener("click", e => {
+    e.preventDefault();
+    doiCheDo(!dangKy);
+});
 
-// Xử lý đăng ký và đăng nhập
-if (form) {
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
 
-        const tenTaiKhoan = taiKhoan.value.trim();
-        const matKhauNhap = matKhau.value.trim();
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    xoaLoi();
 
-        loiTaiKhoan.textContent = "";
-        loiMatKhau.textContent = "";
-        thongBao.textContent = "";
 
-        let hopLe = true;
+    const hoTen = $("hoTen").value.trim();
+    const taiKhoan = $("taiKhoan").value.trim();
+    const email = $("email").value.trim().toLowerCase();
+    const matKhau = $("matKhau").value;
+    const nhapLai = $("nhapLaiMatKhau").value;
+    let hopLe = true;
 
-        if (tenTaiKhoan === "") {
-            loiTaiKhoan.textContent = "Vui lòng nhập tài khoản!";
-            hopLe = false;
-        }
 
-        if (matKhauNhap === "") {
-            loiMatKhau.textContent = "Vui lòng nhập mật khẩu!";
-            hopLe = false;
-        } else if (matKhauNhap.length < 6) {
-            loiMatKhau.textContent = "Mật khẩu phải có ít nhất 6 ký tự!";
-            hopLe = false;
-        }
+    if (!taiKhoan) { hienLoi("loiTaiKhoan","Vui lòng nhập tên đăng nhập."); hopLe = false; }
+    if (!matKhau || matKhau.length < 6) { hienLoi("loiMatKhau","Mật khẩu phải có ít nhất 6 ký tự."); hopLe = false; }
 
+
+    const ds = layNguoiDung();
+
+
+    if (dangKy) {
+        if (!hoTen) { hienLoi("loiHoTen","Vui lòng nhập họ tên."); hopLe = false; }
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { hienLoi("loiEmail","Vui lòng nhập email hợp lệ."); hopLe = false; }
+        if (matKhau !== nhapLai) { hienLoi("loiNhapLai","Mật khẩu nhập lại không khớp."); hopLe = false; }
         if (!hopLe) return;
 
-        let dsNguoiDung = layDanhSachNguoiDung();
 
-        // CHỨC NĂNG ĐĂNG KÝ
-        if (dangKy) {
-            const daTonTai = dsNguoiDung.some(
-                user => user.taiKhoan.toLowerCase() === tenTaiKhoan.toLowerCase()
-            );
-
-            if (daTonTai) {
-                loiTaiKhoan.textContent = "Tài khoản đã tồn tại!";
-                return;
-            }
-
-            const nguoiDungMoi = {
-                id: Date.now(),
-                taiKhoan: tenTaiKhoan,
-                matKhau: matKhauNhap,
-                vaiTro: "user"
-            };
-
-            dsNguoiDung.push(nguoiDungMoi);
-            luuDanhSachNguoiDung(dsNguoiDung);
-
-            thongBao.style.color = "green";
-            thongBao.textContent = "Đăng ký thành công! Hãy đăng nhập.";
-
-            form.reset();
+        if (ds.some(u => (u.taiKhoan || "").toLowerCase() === taiKhoan.toLowerCase())) {
+            hienLoi("loiTaiKhoan","Tên đăng nhập đã tồn tại."); return;
+        }
+        if (ds.some(u => (u.email || "").toLowerCase() === email)) {
+            hienLoi("loiEmail","Email đã được đăng ký."); return;
         }
 
-        // CHỨC NĂNG ĐĂNG NHẬP
-        else {
-            const nguoiDung = dsNguoiDung.find(
-                user =>
-                    user.taiKhoan.toLowerCase() === tenTaiKhoan.toLowerCase() &&
-                    user.matKhau === matKhauNhap
-            );
 
-            if (!nguoiDung) {
-                thongBao.style.color = "red";
-                thongBao.textContent = "Tài khoản hoặc mật khẩu không chính xác!";
-                return;
-            }
+        ds.push({ id: Date.now(), hoTen, taiKhoan, email, matKhau, vaiTro: "Khách hàng" });
+        luuNguoiDung(ds);
+        doiCheDo(false);
+        $("taiKhoan").value = taiKhoan;
+        thongBao.textContent = "Đăng ký thành công! Hãy đăng nhập bằng tài khoản vừa tạo.";
+        thongBao.className = "thanh_cong";
+        return;
+    }
 
-            // Lưu thông tin người đang đăng nhập
-            localStorage.setItem(
-                KEY_CURRENT_USER,
-                JSON.stringify({
-                    id: nguoiDung.id,
-                    taiKhoan: nguoiDung.taiKhoan,
-                    vaiTro: nguoiDung.vaiTro
-                })
-            );
 
-            thongBao.style.color = "green";
-            thongBao.textContent = "Đăng nhập thành công!";
+    if (!hopLe) return;
+    const nhapDangNhap = taiKhoan.toLowerCase();
+    const user = ds.find(u =>
+        ((u.taiKhoan || "").toLowerCase() === nhapDangNhap ||
+         (u.email || "").toLowerCase() === nhapDangNhap) &&
+        u.matKhau === matKhau
+    );
+    if (!user) {
+        thongBao.textContent = "Tên đăng nhập/email hoặc mật khẩu không chính xác.";
+        thongBao.className = "that_bai";
+        return;
+    }
 
-            setTimeout(() => {
-                window.location.href = "../Trang_chu/index.html";
-            }, 1000);
-        }
-    });
-}
+
+    localStorage.setItem(KEY_CURRENT_USER, JSON.stringify({
+        id: user.id, hoTen: user.hoTen || user.taiKhoan,
+        taiKhoan: user.taiKhoan, email: user.email || "",
+        vaiTro: user.vaiTro || "Khách hàng"
+    }));
+    thongBao.textContent = "Đăng nhập thành công! Đang chuyển về trang chủ...";
+    thongBao.className = "thanh_cong";
+    setTimeout(() => window.location.href = "../Trang_chu/index.html", 700);
+});
+
+
+// Nếu đã có tài khoản trong máy này thì hiện đăng nhập; nếu chưa có thì hiện đăng ký.
+doiCheDo(layNguoiDung().length > 0 ? false : true);

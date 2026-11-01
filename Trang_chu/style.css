@@ -5,64 +5,10 @@ body {
 }
 
 /* CSS Thanh điều hướng */
-.thanh_dieu_huong{
-    display: flex;
-    flex-direction:row ;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px; 
-    line-height: normal;
-
-}
-.anh{
-    display: flex;
-    flex-direction: row;  
-    align-items: center;  
-    
-}
 .about-button:hover {
     background-color: #a72e5b;
 }
-.anh .text{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    white-space: nowrap;
-}
 
-.text h1{
-    font-size: 40px;
-    color: hsl(334, 47%, 63%);
-    font-weight: bold;
-    line-height: normal;
-    margin: 0;
-}
-.text p{
-    font-size: 20px;
-    color: hsl(334, 47%, 63%);
-    line-height: normal;
-    margin: 0;
-}
-
-.anh img{
-    height: 150px;
-
-    
-}
-.menu {
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-    list-style: none;
-    margin-left: 10px;
-    padding: 0;
-}
-
-.menu li {
-    list-style: none;
-    font-size: 25px;
-    font-weight: bold;
-}
 
 .menu a {
     color: #51464a;
@@ -71,13 +17,6 @@ body {
 
 .menu a:hover {
     color: #c83e70;
-}
-.icon{
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
-    color: black;
-    gap: 20px;
 }
 
 .banner {
@@ -377,14 +316,6 @@ footer {
     font-style: italic;
 }
 
-/* May tinh bang */
-@media (max-width: 900px) {
-    #lien-he .footer-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-}
-
 /* Dien thoai */
 @media (max-width: 768px) {
     #lien-he {
@@ -399,17 +330,5 @@ footer {
     #lien-he .footer-logo {
         font-size: 30px;
     }
-    /* Thanh điều hướng */
-    .thanh_dieu_huong {
-        flex-wrap: wrap;
-    }
-
-    .menu {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
 }
+

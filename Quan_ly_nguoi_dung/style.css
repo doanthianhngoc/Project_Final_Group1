@@ -1,163 +1,139 @@
-
-/* Thiết lập kích thước cho mọi phần tử */
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box
 }
-
-/* Giao diện tổng thể */
-body {
-    margin: 0;
-    background: #fff8f6;
-    color: #51464a;
-    font-family: Arial, sans-serif;
+body
+{
+    margin:0;
+    background:#fff8f6;
+    color:#51464a;
+    font-family:Arial,sans-serif
 }
-
-/* Thanh đầu trang */
-header {
-    padding: 20px 5%;
-    background: #fbe9e3;
-
-    /* Đặt tên cửa hàng và liên kết trên cùng một hàng */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header{
+    padding:18px 5%;
+    background:#fbe9e3;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px
 }
-
-/* Màu tiêu đề */
-header h1 {
-    color: #bd405c;
+header h1{
+    color:#bd405c;
+    font-size:25px
 }
-
-/* Kiểu hiển thị liên kết */
-a {
-    color: #a52a45;
-    text-decoration: none; /* Bỏ gạch chân */
-    font-weight: bold;
+a{
+    color:#a52a45;
+    text-decoration:none;
+    font-weight:bold
 }
-
-/* Giới hạn chiều rộng nội dung và căn giữa */
-main {
-    width: 92%;
-    max-width: 1180px;
-    margin: 30px auto;
+main{
+    width:92%;
+    max-width:1200px;
+    margin:30px auto
 }
-
-/* Màu tiêu đề */
-h2,
-h3 {
-    color: #a52a45;
+h2,h3{
+    color:#a52a45
 }
-
-/* Khung chứa biểu mẫu và bảng */
-.panel {
-    background: white;
-    border: 1px solid #f0dfe3;
-    border-radius: 12px;
-    padding: 22px;
-    margin: 20px 0;
+h2{
+    text-align:center
 }
-
-/* Sắp xếp các ô nhập thành hai cột */
-form {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 15px;
+.panel{
+    background:#fff;
+    border:1px solid #f0dfe3;
+    border-radius:12px;
+    padding:22px;
+    margin:20px 0
 }
-
-/* Nhãn nằm phía trên ô nhập */
-label {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    font-weight: bold;
+form{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:15px
 }
-
-/* Định dạng ô nhập và danh sách chọn */
-input,
-select {
-    width: 100%;
-    padding: 11px;
-    border: 1px solid #dfc9ce;
-    border-radius: 7px;
-    font: inherit;
+label{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    font-weight:bold
 }
-
-/* Kiểu chung cho nút */
-button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 6px;
-    background: #bd405c;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+input,select{
+    width:100%;
+    padding:11px;
+    border:1px solid #dfc9ce;
+    border-radius:7px;
+    font:inherit
 }
-
-/* Đặt các nút cạnh nhau */
-.buttons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+.buttons{
+    display:flex;
+    gap:10px;
+    align-items:center
 }
-
-/* Khung bảng cho phép cuộn ngang khi màn hình nhỏ */
-.table-wrap {
-    overflow-x: auto;
-    margin: 15px 0;
+button{
+    padding:10px 15px;
+    border:0;
+    border-radius:6px;
+    background:#bd405c;
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer
 }
-
-/* Bảng chiếm toàn bộ chiều rộng */
-table {
-    width: 100%;
-    min-width: 750px;
-    border-collapse: collapse; /* Gộp đường viền */
+button.secondary{
+    background:#777
 }
-
-/* Khoảng cách và đường kẻ của từng ô */
-th,
-td {
-    padding: 12px;
-    border-bottom: 1px solid #eadadd;
-    text-align: left;
+#message{
+    grid-column:1/-1;
+    margin:0
 }
-
-/* Phần tiêu đề bảng */
-th {
-    background: #fbe9e3;
-    color: #a52a45;
+#message.error{
+    color:#c0392b
 }
-
-/* Nút sửa */
-.edit {
-    background: #3478bd;
+#message.success{
+    color:#18794e
 }
-
-/* Nút xóa */
-.delete {
-    background: #c0392b;
+#search{
+    max-width:500px;
+    margin:8px 0 15px
 }
-
-/* Xếp nút sửa và xóa cạnh nhau */
-.row-actions {
-    display: flex;
-    gap: 7px;
+.table-wrap{
+    overflow-x:auto
 }
-
-/* Màu thông báo */
-#message {
-    color: #18794e;
+table{
+    width:100%;
+    min-width:850px;
+    border-collapse:collapse
 }
-
-/* Responsive cho màn hình điện thoại */
-@media (max-width: 650px) {
-    form {
-        grid-template-columns: 1fr; /* Chuyển thành một cột */
+th,td{
+    padding:12px;
+    border-bottom:1px solid #eadadd;
+    text-align:left
+}
+th{
+    background:#fbe9e3;
+    color:#a52a45
+}
+.actions{
+    display:flex;
+    gap:7px
+}
+.edit{
+    background:#3478bd
+}
+.delete{
+    background:#c0392b
+}
+.empty{
+    text-align:center;
+    color:#777
+}
+@media(max-width:650px){
+    form{
+        grid-template-columns:1fr
     }
-
-    header {
-        flex-wrap: wrap;
-        gap: 10px;
+    header{
+        flex-wrap:wrap
+    }
+    main{
+        width:95%
+    }
+    .panel{
+        padding:15px
     }
 }
-
-

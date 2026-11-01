@@ -1,0 +1,143 @@
+
+/* Khu vực tài khoản */
+#taiKhoanContainer {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Nút icon hình người */
+.nut-mo-tai-khoan {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: #222;
+    font-size: 21px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nut-mo-tai-khoan:hover {
+    color: #bd405c;
+}
+
+/* Bảng xổ xuống */
+.popup-tai-khoan {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 290px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    color: #333;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+}
+
+.popup-tai-khoan.hien-thi {
+    display: block;
+}
+
+/* Phần đầu bảng */
+.tai-khoan-dau {
+    background: #eef0ff;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.avatar-tai-khoan {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #d5d5d5;
+    color: #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 0 auto 12px;
+}
+
+.tai-khoan-dau h3 {
+    font-size: 17px;
+    margin: 0 0 6px;
+    color: #222;
+}
+
+.tai-khoan-dau p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Phần thông tin */
+.tai-khoan-thong-tin {
+    padding: 12px 18px;
+}
+
+.tai-khoan-thong-tin p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+.tai-khoan-thong-tin i {
+    width: 18px;
+    color: #777;
+}
+
+/* Nút đăng xuất */
+.tai-khoan-cuoi {
+    border-top: 1px solid #eee;
+    padding: 13px;
+    text-align: center;
+}
+
+.nut-dang-xuat {
+    border: none;
+    background: #bd405c;
+    color: white;
+    padding: 9px 22px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nut-dang-xuat:hover {
+    background: #922c47;
+}
+
+/* Chưa đăng nhập */
+.tai-khoan-chua-dang-nhap {
+    padding: 22px;
+    text-align: center;
+}
+
+.tai-khoan-chua-dang-nhap a {
+    display: inline-block;
+    background: #bd405c;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* Điện thoại */
+@media (max-width: 480px) {
+    .popup-tai-khoan {
+        width: 270px;
+        right: -10px;
+    }
+}
+
