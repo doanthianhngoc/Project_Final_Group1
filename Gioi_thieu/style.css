@@ -1,10 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #51464a;
+    background-color: #ffffff;
+    margin: 20px;
+}
 /* CSS Thanh điều hướng */
 .thanh_dieu_huong{
     display: flex;
     flex-direction:row ;
     justify-content: space-between;
     align-items: center;
-    margin: 20px; 
+    margin-top: 20px; 
     line-height: normal;
 
 }
@@ -74,62 +85,57 @@
     gap: 20px;
 }
 
+/* Banner */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.image{
+    position: relative;
+    margin-top: 20px;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    color: #51464a;
-    background-color: #ffffff;
-}
-
-
-
-.about-us {
+.image img{
+    display: block;
     width: 100%;
+    height: 250px;
 }
-
-
-.about-banner {
-    min-height: 210px;
-    padding: 45px 20px;
-    background: linear-gradient(135deg, #fbe5e5, #fff0f0);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-}
-
-.about-banner h1 {
+.image h1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #9e3d61;
     font-family: Georgia, serif;
-    font-size: 42px;
-    font-style: italic;
-    margin-bottom: 18px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    white-space: nowrap;
+    width: max-content;
+}
+.image p{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #9e3d61;
+    font-family: Georgia, serif;
+    text-align: center;
+    font-size: 30px;
 }
 
-.about-banner p {
-    color: #70535d;
-    font-size: 20px;
-}
-
+/* ========================================
+   5. ABOUT STORY - PHẦN GIỚI THIỆU
+======================================== */
 
 .about-story {
     max-width: 1200px;
     margin: 0 auto;
     padding: 35px 25px 45px;
+
     display: grid;
     grid-template-columns: 390px 1fr;
     gap: 40px;
     align-items: center;
 }
 
+/* Hình ảnh bên trái */
 
 .about-image {
     width: 100%;
@@ -146,6 +152,7 @@ body {
     object-position: center;
 }
 
+/* Nội dung bên phải */
 
 .about-content {
     min-width: 0;
@@ -165,6 +172,10 @@ body {
 }
 
 
+/* ========================================
+   6. ABOUT VALUES - GIÁ TRỊ CỐT LÕI
+======================================== */
+
 .about-values {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -183,18 +194,24 @@ body {
     border-right: none;
 }
 
+/* Biểu tượng giá trị */
+
 .value-icon {
     width: 54px;
     height: 54px;
     margin-bottom: 12px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     border-radius: 50%;
     background-color: #fbe7ef;
     color: #a64068;
     font-size: 30px;
 }
+
+/* Tiêu đề và mô tả */
 
 .value-item h3 {
     font-size: 17px;
@@ -209,33 +226,62 @@ body {
 }
 
 
+/* ========================================
+   7. ABOUT BUTTON - NÚT XEM SẢN PHẨM
+======================================== */
+
 .about-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 22px;
+
     padding: 16px 25px;
     background-color: #c83e70;
     color: white;
+
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
+
     border-radius: 10px;
     transition: background-color 0.3s;
 }
 
 .about-button:hover {
     background-color: #a72e5b;
+    color: white;
+    text-decoration: none;
 }
 
 .about-button span {
     font-size: 22px;
 }
 
-/* Giao diện điện thoại */
+
+/* ========================================
+   8. RESPONSIVE - GIAO DIỆN ĐIỆN THOẠI
+======================================== */
+
 @media (max-width: 768px) {
+
+    /* Header */
+
     .thanh_dieu_huong {
         flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .anh img {
+        height: 100px;
+    }
+
+    .text h1 {
+        font-size: 30px;
+    }
+
+    .text p {
+        font-size: 16px;
     }
 
     .menu {
@@ -247,35 +293,71 @@ body {
         margin-bottom: 20px;
     }
 
-    .khung_dang_nhap {
-        flex-direction: column;
+    .menu li {
+        font-size: 18px;
     }
 
-    .hinh_anh,
-    .form_dang_nhap {
-        width: 100%;
+    /* Banner */
+
+    .image h1 {
+        left: 30px;
+        font-size: 40px;
     }
 
-    .hinh_anh {
-        padding: 25px;
+    .image p {
+        left: 30px;
+        font-size: 20px;
     }
 
-    .form_dang_nhap {
-        padding: 25px;
-    }
+    /* Nội dung chính */
 
-
-    .about-story{
+    .about-story {
         display: flex;
         flex-direction: column;
     }
-}
 
-@media (max-width: 400px) {
-    .tuy_chon {
-        align-items: flex-start;
-        flex-direction: column;
+    .about-image {
+        height: 350px;
+    }
+
+    .about-values {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
 
+/* Điện thoại màn hình nhỏ */
+
+@media (max-width: 400px) {
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu li {
+        font-size: 15px;
+    }
+
+    .image h1 {
+        font-size: 32px;
+    }
+
+    .image p {
+        font-size: 17px;
+    }
+
+    .about-values {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .value-item {
+        border-right: none;
+        border-bottom: 1px solid #f0e1e5;
+        padding-bottom: 15px;
+    }
+
+    .value-item:last-child {
+        border-bottom: none;
+    }
+}

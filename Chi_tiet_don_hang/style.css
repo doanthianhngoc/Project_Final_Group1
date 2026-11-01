@@ -1,0 +1,235 @@
+/* ============================= */
+/* 1. CÀI ĐẶT CHUNG */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffafa;
+    color: #333;
+}
+
+/* ============================= */
+/* 2. HEADER - GIỮ NGUYÊN */
+/* ============================= */
+
+.thanh_dieu_huong {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    line-height: normal;
+}
+
+.anh {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.anh .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.text h1 {
+    font-size: 40px;
+    color: hsl(334, 47%, 63%);
+    font-weight: bold;
+    line-height: normal;
+    margin: 0;
+}
+
+.text p {
+    font-size: 20px;
+    color: hsl(334, 47%, 63%);
+    line-height: normal;
+    margin: 0;
+}
+
+.anh img {
+    height: 150px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    list-style: none;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: #51464a;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #c83e70;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    color: black;
+    gap: 20px;
+}
+
+/* ============================= */
+/* 3. BANNER - GIỮ NGUYÊN */
+/* ============================= */
+
+.image {
+    position: relative;
+    margin-top: 20px;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    height: 250px;
+}
+
+.image h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #9e3d61;
+    font-family: Georgia, serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    white-space: nowrap;
+    width: max-content;
+}
+
+.image p {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #9e3d61;
+    font-family: Georgia, serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+
+/* Nội dung chính */
+main {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #00000012;
+}
+
+main h2 {
+    text-align: center;
+    color: #b34d70;
+    margin-bottom: 25px;
+}
+
+/* Thông tin đơn hàng */
+.order-info {
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.order-info h3,
+.product-list h3 {
+    color: #b34d70;
+    margin-bottom: 10px;
+}
+
+/* Danh sách sản phẩm */
+.product-list {
+    margin-bottom: 25px;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Tổng tiền */
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.order-total strong {
+    color: #c43d72;
+}
+
+/* Trạng thái */
+.status {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #fff1f5;
+    color: #b34d70;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Nút quay lại */
+.back-button {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    padding: 13px;
+    background-color: #c43d72;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.back-button:hover {
+    background-color: #a92f60;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    main {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    .product-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

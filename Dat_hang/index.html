@@ -30,9 +30,9 @@
 
         <nav class="menu">
             <li><a href="../Trang_chu/index.html">Trang chủ</a></li>
-                <li><a href="../Gioithieu/index.html">Giới thiệu</a></li>
-                <li><a href="../San_pham/index.html">Sản phẩm</a></li>
-                <li><a href="../Lienhe/index.html">Liên hệ</a></li>
+            <li><a href="../Gioi_thieu/index.html">Giới thiệu</a></li>
+            <li><a href="../San_pham/index.html">Sản phẩm</a></li>
+            <li><a href="../Lien_he/index.html">Liên hệ</a></li>
         </nav>
 
         <div class="icon">
@@ -65,48 +65,91 @@
 
         <form id="orderForm">
 
+            <!-- Họ và tên -->
             <label for="name">Họ và tên</label>
             <input type="text" id="name"
                    placeholder="Nhập họ và tên" required>
 
+            <!-- Email -->
+            <label for="email">Email</label>
+            <input type="email" id="email"
+                   placeholder="Nhập email của bạn" required>
+
+            <!-- Số điện thoại -->
             <label for="phone">Số điện thoại</label>
             <input type="tel" id="phone"
                    placeholder="Nhập số điện thoại" required>
 
+            <!-- Địa chỉ -->
             <label for="address">Địa chỉ nhận hàng</label>
             <textarea id="address"
                       placeholder="Nhập địa chỉ cụ thể"
                       required></textarea>
 
+            <!-- Ghi chú -->
             <label for="note">Ghi chú</label>
             <textarea id="note"
                       placeholder="Ghi chú thêm (nếu có)"></textarea>
 
+            <!-- Phương thức thanh toán -->
             <label for="payment">Phương thức thanh toán</label>
             <select id="payment">
                 <option value="Thanh toán khi nhận hàng (COD)">
                     Thanh toán khi nhận hàng (COD)
                 </option>
+
                 <option value="Chuyển khoản ngân hàng">
                     Chuyển khoản ngân hàng
                 </option>
             </select>
 
+            <!-- Danh sách sản phẩm -->
+            <div class="order-products">
+                <h3>SẢN PHẨM ĐẶT MUA</h3>
+
+                <div id="orderItems">
+                    <!-- JavaScript sẽ hiển thị sản phẩm ở đây -->
+                </div>
+            </div>
+
             <!-- Tổng tiền -->
             <div class="total">
                 <span>Tổng thanh toán</span>
-                <strong id="totalPrice">450.000đ</strong>
+                <strong id="totalPrice">0đ</strong>
             </div>
 
+            <!-- Nút đặt hàng -->
             <button type="submit" class="order-button">
                 ĐẶT HÀNG NGAY
             </button>
 
+            <!-- Quay lại giỏ hàng -->
             <a class="back" href="../Gio_hang/index.html">
                 Quay lại giỏ hàng
             </a>
 
         </form>
+                <!-- Màn hình đặt hàng thành công -->
+        <div id="successMessage" style="display: none;">
+
+            <h2>ĐẶT HÀNG THÀNH CÔNG!</h2>
+
+            <p>
+                Cảm ơn bạn đã tin tưởng và lựa chọn Áo Dài Việt.
+                Đơn hàng của bạn đã được ghi nhận.
+            </p>
+
+            <div class="success-buttons">
+                <button type="button" id="homeButton">
+                    Quay lại trang chủ
+                </button>
+
+                <button type="button" id="detailButton">
+                    Xem chi tiết đơn hàng
+                </button>
+            </div>
+
+        </div>
     </main>
 
     <!-- Chân trang -->
@@ -114,6 +157,8 @@
         © 2026 Áo Dài Việt
     </footer>
 
+    <!-- Kết nối JavaScript -->
     <script src="script.js"></script>
+
 </body>
 </html>
