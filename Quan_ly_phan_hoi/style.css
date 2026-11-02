@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fff8f6;
+    color: #51464a;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    width: 94%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.tieu-de {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #a52a45;
+}
+
+a {
+    color: #a52a45;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bo-loc {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.bo-loc input {
+    flex: 1;
+    padding: 11px;
+    border: 1px solid #dfc9ce;
+    border-radius: 7px;
+}
+
+.bang-bao-cao {
+    overflow-x: auto;
+    background: white;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eadadd;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #fbe9e3;
+    color: #a52a45;
+}
+
+.noi-dung {
+    min-width: 260px;
+    max-width: 360px;
+    white-space: pre-wrap;
+}
+
+.khong-co-du-lieu {
+    padding: 30px;
+    text-align: center;
+    color: #777;
+}
+
+button {
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.nut-sua {
+    margin-right: 5px;
+    background: #3478bd;
+}
+
+.nut-xoa {
+    background: #c0392b;
+}
+
+.hop-sua[hidden] {
+    display: none;
+}
+
+.hop-sua {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hop-sua-noi-dung {
+    width: min(560px, 100%);
+    display: grid;
+    gap: 10px;
+    padding: 25px;
+    border-radius: 10px;
+    background: white;
+}
+
+.hop-sua-noi-dung input,
+.hop-sua-noi-dung textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dfc9ce;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.nut-hop {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.nut-luu {
+    background: #a52a45;
+}
+
+.nut-dong {
+    background: #777;
+}
+
+#thongBao {
+    min-height: 24px;
+    color: #18794e;
+    font-weight: bold;
+}
+
+
+/* Giúp bảng hiển thị nội dung dài mà không bị tràn */
+.bang-bao-cao {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.bang-bao-cao table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+/* Nội dung các ô trong bảng */
+.bang-bao-cao th,
+.bang-bao-cao td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+}
+
+/* Riêng cột nội dung phản hồi */
+.bang-bao-cao td.noi-dung {
+    text-align: left;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.6;
+}
+
+/* Cột thao tác không bị xuống dòng */
+.bang-bao-cao td:last-child {
+    white-space: nowrap;
+}

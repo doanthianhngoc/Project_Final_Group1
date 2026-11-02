@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý phản hồi liên hệ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="tieu-de">
+            <h1>Quản lý phản hồi liên hệ</h1>
+        </div>
+
+        <p id="thongBao" role="status"></p>
+
+        <section class="bo-loc">
+            <label for="timKiem">Tìm theo tên, email hoặc nội dung</label>
+            <input id="timKiem" type="search" placeholder="Nhập từ khóa...">
+        </section>
+
+        <section class="bang-bao-cao">
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Họ và tên</th>
+                        <th>Email</th>
+                        <th>Nội dung</th>
+                        <th>Ngày gửi</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="danhSachPhanHoi"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <div class="hop-sua" id="hopSua" hidden>
+        <form id="formSua" class="hop-sua-noi-dung">
+            <h2>Sửa phản hồi</h2>
+            <input type="hidden" id="idPhanHoi">
+
+            <label for="hoTen">Họ và tên</label>
+            <input id="hoTen" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" required>
+
+            <label for="noiDung">Nội dung</label>
+            <textarea id="noiDung" rows="5" required></textarea>
+
+            <div class="nut-hop">
+                <button type="submit" class="nut-luu">Lưu thay đổi</button>
+                <button type="button" id="nutDong" class="nut-dong">Đóng</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

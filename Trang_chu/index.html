@@ -26,7 +26,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body onload="hienThiSanPham()">
     <!-- Phần thanh điều hướng -->
         <div class="thanh_dieu_huong">
             <div class="anh">
@@ -107,42 +107,8 @@
 
         <h2>→ Sản phẩm nổi bật ←</h2>
 
-        <div class="product-list">
-
-            <div class="product">
-                <img src="s11.jpg"
-                    alt="Áo dài truyền thống">
-
-                <h3>Áo dài truyền thống</h3>
-                <p class="price">450.000đ</p>
-                <p class="rating">★★★★★ <span>(24)</span></p>
-            </div>
-
-            <div class="product">
-                <img src="s12.jpg"
-                    alt="Áo dài cách tân">
-                <h3>Áo dài cách tân</h3>
-                <p class="price">520.000đ</p>
-                <p class="rating">★★★★★ <span>(18)</span></p>
-            </div>
-
-            <div class="product">
-                <img src="s13.jpg"
-                    alt="Áo dài gấm cao cấp">
-
-                <h3>Áo dài gấm cao cấp</h3>
-                <p class="price">680.000đ</p>
-                <p class="rating">★★★★★ <span>(15)</span></p>
-            </div>
-
-            <div class="product">
-                <img src="s15.jpg"
-                    alt="Áo dài dự tiệc">
-
-                <h3>Áo dài dự tiệc</h3>
-                <p class="price">420.000đ</p>
-                <p class="rating">★★★★★ <span>(12)</span></p>
-            </div>
+        <!-- Danh sách sản phẩm được hiển thị từ JavaScript -->
+        <div class="product-list" id="productList">
         </div>
 
         <div class="more">
@@ -270,6 +236,7 @@
         </p>
     </div>
 </footer>
+<script src="script.js"></script>
 <script src="../Dung_chung/tai-khoan.js"></script>
 </body>
 </html>
