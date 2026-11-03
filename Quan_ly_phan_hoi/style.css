@@ -15,14 +15,10 @@ main {
     margin: 30px auto;
 }
 
-.tieu-de {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-h1 {
+.tieu-de h1 {
     color: #a52a45;
+    text-align: center;
+
 }
 
 a {
@@ -36,6 +32,7 @@ a {
     align-items: center;
     gap: 15px;
     margin: 20px 0;
+    margin-top: 10px;
 }
 
 .bo-loc input {

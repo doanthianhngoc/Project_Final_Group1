@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý hệ thống - Áo Dài Việt</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2 class="logo">
+            <i class="fa-solid fa-spa"></i>
+            Áo Dài Việt
+        </h2>
+
+        <p class="sidebar-title">TRANG QUẢN TRỊ</p>
+
+        <nav class="menu">
+
+            <a href="#" class="active"
+                onclick="hienThiTrang('tongquan', this); return false;">
+                <i class="fa-solid fa-house"></i>
+                Tổng quan
+            </a>
+
+            <a href="#"
+                onclick="hienThiTrang('donhang', this); return false;">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Quản lý đơn hàng
+            </a>
+
+            <a href="#"
+                onclick="hienThiTrang('nguoidung', this); return false;">
+                <i class="fa-solid fa-users"></i>
+                Quản lý người dùng
+            </a>
+
+            <a href="#"
+                onclick="hienThiTrang('phanhoi', this); return false;">
+                <i class="fa-solid fa-comments"></i>
+                Quản lý phản hồi
+            </a>
+
+        </nav>
+
+        <a href="../Trang_chu/index.html" class="back-home">
+            <i class="fa-solid fa-arrow-left"></i>
+            Về trang chủ
+        </a>
+
+    </aside>
+
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="main-content">
+
+        <!-- TRANG TỔNG QUAN -->
+        <section id="noiDungTongQuan">
+
+            <header class="top-header">
+
+                <div>
+                    <h1>Trang quản trị</h1>
+                    <p>Chào mừng bạn đến với hệ thống quản lý Áo Dài Việt!</p>
+                </div>
+
+                <div class="admin">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span>Quản trị viên</span>
+                </div>
+
+            </header>
+
+
+            <section class="welcome">
+                <h2>Xin chào, Quản trị viên!</h2>
+
+                <p>
+                    Quản lý và theo dõi hoạt động của cửa hàng
+                    Áo Dài Việt tại đây.
+                </p>
+            </section>
+
+
+            <h2 class="section-title">Danh mục quản lý</h2>
+
+
+            <section class="dashboard">
+
+                <div class="card">
+                    <div class="card-icon order">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+
+                    <h3>Quản lý đơn hàng</h3>
+
+                    <p>
+                        Theo dõi, kiểm tra và quản lý
+                        thông tin các đơn hàng.
+                    </p>
+
+                    <button onclick="moTrang('donhang')">
+                        Truy cập ngay
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-icon user">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <h3>Quản lý người dùng</h3>
+
+                    <p>
+                        Xem và quản lý thông tin
+                        tài khoản người dùng.
+                    </p>
+
+                    <button onclick="moTrang('nguoidung')">
+                        Truy cập ngay
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-icon feedback">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <h3>Quản lý phản hồi</h3>
+
+                    <p>
+                        Theo dõi và xử lý các ý kiến,
+                        phản hồi từ khách hàng.
+                    </p>
+
+                    <button onclick="moTrang('phanhoi')">
+                        Truy cập ngay
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- KHU VỰC HIỂN THỊ CÁC TRANG QUẢN LÝ -->
+        <iframe id="khungQuanLy" title="Khu vực quản lý"></iframe>
+
+
+        <footer>
+            © 2026 Áo Dài Việt | Tôn vinh nét đẹp Việt
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

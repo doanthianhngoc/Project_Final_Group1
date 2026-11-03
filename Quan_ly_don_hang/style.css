@@ -13,117 +13,6 @@ body {
     margin: 20px;
 }
 
-/* CSS THANH ĐIỀU HƯỚNG */
-.thanh_dieu_huong{
-    display: flex;
-    flex-direction:row ;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    line-height: normal;
-}
-
-.anh{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.anh .text{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    white-space: nowrap;
-}
-
-.text h1{
-    font-size: 40px;
-    color: hsl(334, 47%, 63%);
-    font-weight: bold;
-    line-height: normal;
-    margin: 0;
-}
-
-.text p{
-    font-size: 20px;
-    color: hsl(334, 47%, 63%);
-    line-height: normal;
-    margin: 0;
-}
-
-.anh img{
-    height: 150px;
-}
-
-.menu {
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-    list-style: none;
-    margin-left: 10px;
-    padding: 0;
-}
-
-.menu li {
-    list-style: none;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.menu a {
-    color: #51464a;
-    text-decoration: none;
-}
-
-.menu a:hover {
-    color: #c83e70;
-}
-
-.icon{
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
-    color: black;
-    gap: 20px;
-}
-
-/* CSS BANNER */
-.image{
-    position: relative;
-    margin-top: 20px;
-}
-
-.image img{
-    display: block;
-    width: 100%;
-    height: 250px;
-}
-
-.image h1{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #9e3d61;
-    font-family: Georgia, serif;
-    text-align: center;
-    font-weight: bold;
-    font-size: 60px;
-    white-space: nowrap;
-    width: max-content;
-}
-
-.image p{
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #9e3d61;
-    font-family: Georgia, serif;
-    text-align: center;
-    font-size: 30px;
-}
-
 /* PHẦN QUẢN LÝ ĐƠN HÀNG */
 main {
     max-width: 1200px;
@@ -134,10 +23,11 @@ main {
     box-shadow: 0 2px 12px #00000012;
 }
 
-main h2 {
+main h1 {
     text-align: center;
     color: #b34d70;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .intro {
@@ -195,31 +85,7 @@ tr:hover {
     opacity: 0.8;
 }
 
-/* NÚT QUAY LẠI */
-.back-button {
-    display: block;
-    width: 200px;
-    margin: 25px auto 0;
-    padding: 12px;
-    text-align: center;
-    background-color: #c43d72;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-}
 
-.back-button:hover {
-    background-color: #a92f60;
-    color: white;
-    text-decoration: none;
-}
-
-/* CHÂN TRANG */
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #777;
-}
 
 /* GIAO DIỆN ĐIỆN THOẠI */
 @media (max-width: 768px) {

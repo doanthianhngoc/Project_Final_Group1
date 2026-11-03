@@ -8,33 +8,25 @@ body
     color:#51464a;
     font-family:Arial,sans-serif
 }
-header{
-    padding:18px 5%;
-    background:#fbe9e3;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:15px
-}
-header h1{
-    color:#bd405c;
-    font-size:25px
-}
 a{
     color:#a52a45;
     text-decoration:none;
     font-weight:bold
 }
-main{
-    width:92%;
-    max-width:1200px;
-    margin:30px auto
+main {
+    width: 94%;
+    max-width: 1200px;
+    margin: 30px auto;
 }
-h2,h3{
+h1,h3{
     color:#a52a45
 }
-h2{
-    text-align:center
+.tieu_de h1{
+    text-align: center;
+    color: #b34d70;
+    margin-bottom: 10px;
+    font-weight: bold;
+
 }
 .panel{
     background:#fff;
