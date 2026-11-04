@@ -1,7 +1,8 @@
 // Danh sách sản phẩm
 const list_san_pham = [
 {
-    id:1,anh:"../img/aodai1.jpg",
+    id:1,
+    anh:"../img/aodai1.jpg",
     ten:"Áo dài truyền thống",
     gia:450000,category:"truyen-thong"
 },
@@ -237,34 +238,56 @@ function hienThiPhanTrang(){
         khung.appendChild(nut);
     }
 }
-function themVaoGio(id){
-    let gioHang=layGioHang();
-    let sp=list_san_pham.find(
-        function(item){
-            return item.id===id;
-        }
-    );
-    if(!sp){
+function themVaoGio(id) {
+
+    // Kiểm tra người dùng đã đăng nhập chưa
+    let nguoiDung = localStorage.getItem("nguoiDungDangNhap");
+
+    if (!nguoiDung) {
+        alert("Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng!");
+
+        window.location.href = "../Dang_Nhap_Ky/index.html";
+
+        return; // Dừng hàm, không thêm sản phẩm
+    }
+
+    // Lấy danh sách giỏ hàng
+    let gioHang = layGioHang();
+
+    // Tìm sản phẩm
+    let sp = list_san_pham.find(function(item) {
+        return item.id == id;
+    });
+
+    if (!sp) {
         alert("Không tìm thấy sản phẩm!");
         return;
     }
-    let daCo=gioHang.find(
-        function(item){
-            return item.id===id;
-        }
-    );
-    if(daCo){
-        daCo.soLuong+=1;
-    }
-    else{
+
+    // Kiểm tra sản phẩm đã có trong giỏ chưa
+    let daCo = gioHang.find(function(item) {
+        return item.id == id;
+    });
+
+    if (daCo) {
+        daCo.soLuong++;
+    } else {
         gioHang.push({
-                id:sp.id,anh:sp.anh,ten:sp.ten,gia:sp.gia,soLuong:1
-            }
-        );
+            id: sp.id,
+            anh: sp.anh,
+            ten: sp.ten,
+            gia: sp.gia,
+            soLuong: 1
+        });
     }
-    localStorage.setItem(KEY_GIO_HANG,JSON.stringify(gioHang));
-    // Chuyển thẳng sang trang giỏ hàng sau khi lưu.
-    window.location.href="../Gio_hang/index.html";
+
+    // Lưu giỏ hàng
+    localStorage.setItem(KEY_GIO_HANG, JSON.stringify(gioHang));
+
+    // Cập nhật số lượng giỏ hàng
+    capNhatSoLuongGioHang();
+
+    alert("Thêm sản phẩm vào giỏ hàng thành công!");
 }
 function capNhatSoLuongGioHang(){
     let tong=0;

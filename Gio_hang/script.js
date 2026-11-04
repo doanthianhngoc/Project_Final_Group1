@@ -85,12 +85,26 @@ function xoaSanPham(id){
     luuGioHang(gioHang);
     hienThiGioHang();
 }
-function thanhToan(){
-    if(layGioHang().length===0){
+
+function thanhToan() {
+
+    // Kiểm tra giỏ hàng trống
+    if (layGioHang().length === 0) {
         alert("Giỏ hàng đang trống!");
         return;
     }
-   
-    window.location.href="../Dat_hang/index.html";
+
+    // Kiểm tra đăng nhập
+    let nguoiDung = localStorage.getItem("nguoiDungDangNhap");
+
+    if (!nguoiDung) {
+        alert("Bạn cần đăng nhập trước khi đặt hàng!");
+        window.location.href = "../Dang_Nhap_Ky/index.html";
+        return;
+    }
+
+    // Chuyển đến trang đặt hàng
+    window.location.href = "../Dat_hang/index.html";
 }
+
 hienThiGioHang();
