@@ -4,21 +4,50 @@ const orderForm = document.getElementById("orderForm");
 const orderItems = document.getElementById("orderItems");
 const totalPrice = document.getElementById("totalPrice");
 
-// 2. Khai báo tên các mục lưu trong localStorage
+// 2. Tên các mục lưu trong localStorage
 const KEY_GIO_HANG = "gioHangAoDai";
 const KEY_DON_HANG = "donHangAoDai";
+const KEY_CURRENT_USER = "nguoiDungDangNhap";
 
-// 3. Lấy dữ liệu giỏ hàng
+// 3. Lấy thông tin người dùng đang đăng nhập
+function layNguoiDungDangNhap() {
+    try {
+        return JSON.parse(localStorage.getItem(KEY_CURRENT_USER));
+    } catch (error) {
+        return null;
+    }
+}
+
+// 4. Tự động điền thông tin người dùng vào form
+function dienThongTinNguoiDung() {
+    const nguoiDung = layNguoiDungDangNhap();
+
+    if (!nguoiDung) {
+        alert("Bạn cần đăng nhập trước khi đặt hàng!");
+        window.location.href = "../Dang_Nhap_Ky/index.html";
+        return;
+    }
+
+    // Điền tên đăng nhập
+    document.getElementById("name").value =
+        nguoiDung.taiKhoan || "";
+
+    // Điền Gmail
+    document.getElementById("email").value =
+        nguoiDung.email || "";
+}
+
+// 5. Lấy dữ liệu giỏ hàng
 function layGioHang() {
     return JSON.parse(localStorage.getItem(KEY_GIO_HANG)) || [];
 }
 
-// 4. Định dạng giá tiền
+// 6. Định dạng giá tiền
 function dinhDangTien(gia) {
     return gia.toLocaleString("vi-VN") + "đ";
 }
 
-// 5. Hiển thị sản phẩm và tính tổng tiền
+// 7. Hiển thị sản phẩm và tính tổng tiền
 function hienThiDonHang() {
     const gioHang = layGioHang();
     let tongTien = 0;
@@ -48,10 +77,11 @@ function hienThiDonHang() {
     totalPrice.textContent = dinhDangTien(tongTien);
 }
 
-// 6. Hiển thị đơn hàng khi mở trang
+// 8. Hiển thị thông tin khi mở trang đặt hàng
+dienThongTinNguoiDung();
 hienThiDonHang();
 
-// 7. Xử lý khi khách nhấn nút đặt hàng
+// 9. Xử lý khi khách nhấn nút đặt hàng
 orderForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
