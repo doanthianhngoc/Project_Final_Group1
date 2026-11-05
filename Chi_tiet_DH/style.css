@@ -1,0 +1,219 @@
+
+/* ============================= */
+/* 1. CÀI ĐẶT CHUNG */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* CSS Thanh điều hướng */
+.about-button:hover {
+    background-color: #a72e5b;
+}
+
+
+.menu a {
+    color: #51464a;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #c83e70;
+}
+
+/* 4. FORM ĐẶT HÀNG */
+
+main {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #00000012;
+    margin-top: 100px;
+}
+
+main h2 {
+    color: #b34d70;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.intro {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* ============================= */
+/* 5. DANH SÁCH SẢN PHẨM */
+/* ============================= */
+
+.order-products {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #fff7f9;
+    border-radius: 8px;
+}
+
+.order-products h3 {
+    color: #b34d70;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* ============================= */
+/* 6. TỔNG THANH TOÁN */
+/* ============================= */
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    margin-top: 25px;
+    padding-top: 20px;
+}
+
+.total strong {
+    color: #c43d72;
+    font-size: 20px;
+}
+
+/* ============================= */
+/* 7. NÚT ĐẶT HÀNG */
+/* ============================= */
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: #c43d72;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a92f60;
+}
+
+.back {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    color: #b34d70;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+/* Màn hình đặt hàng thành công */
+
+#successMessage {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+#successMessage h2 {
+    color: #b34d70;
+    margin-bottom: 15px;
+}
+
+#successMessage p {
+    color: #777;
+    line-height: 1.6;
+}
+
+.success-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.success-buttons button {
+    margin-top: 0;
+}
+
+@media (max-width: 480px) {
+    .success-buttons {
+        flex-direction: column;
+    }
+}
+
+/* ============================= */
+/* 8. GIAO DIỆN ĐIỆN THOẠI */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .thanh_dieu_huong {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    main {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    .image h1 {
+        font-size: 40px;
+    }
+
+    .image p {
+        font-size: 20px;
+    }
+}

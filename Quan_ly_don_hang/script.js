@@ -59,7 +59,7 @@ function xemDonHang(i) {
     localStorage.setItem("donHangCuoiCung", maDon);
 
     // Chuyển sang trang chi tiết đơn hàng
-    window.location.href = "../Chi_tiet_don_hang/index.html";
+    window.location.href = "../Chi_tiet_DH/index.html";
 }
 
 // 5. Cập nhật trạng thái đơn hàng
